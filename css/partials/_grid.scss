@@ -1,0 +1,40 @@
+@mixin grid-system($col-count:12,$max-width:1200px, $gutter-size:12px) {
+
+    $oneColWidth: 100%/$col-count;
+
+    .grid-container {
+        width: 100%;
+        // max-width: 1200px;
+        max-width: $max-width;
+        margin: 0 auto;
+        // background: green;
+        // * {
+        // box-sizing: border-box;
+        // }
+        .row {
+            // background: orange;
+            &::after,
+            &::before {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            [class*="col-"] {
+                float: left;
+                min-height: 1px;
+                margin: 0;
+                // background: blue;
+                // gutter
+                padding: $gutter-size;
+                box-sizing: border-box;
+            }
+            @for $i from 1 through $col-count {
+                .col-#{$i} {
+                    width: $oneColWidth*$i;
+                }
+            }
+        }
+    }
+}
+// @include grid-system(12, 65vw, 4px);

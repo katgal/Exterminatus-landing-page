@@ -1,0 +1,12 @@
+//EMPEROR PROTECTS
+
+//MODULES
+@import "modules/variables";
+@import "modules/mixins";
+//PARTIALS
+@import "partials/reset";
+@import "partials/grid";
+@import "partials/header";
+
+
+// pamietac o min-height w vh i vw, jesli nie bedze dzialac w media queris i ogolnie przy rwd
