@@ -6,7 +6,14 @@
 //PARTIALS
 @import "partials/reset";
 @import "partials/grid";
+//HEADER
 @import "partials/header";
-
-
+//NAVBAR
+@import "partials/navbar";
+//first section1
+@import "partials/section1";
+//section 2 about us
+@import "partials/section2AboutUs";
+//section 3 first parallax
+@import "partials/section3parallax"
 // pamietac o min-height w vh i vw, jesli nie bedze dzialac w media queris i ogolnie przy rwd

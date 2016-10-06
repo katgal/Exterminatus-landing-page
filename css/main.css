@@ -155,10 +155,18 @@ header h1 {
   font-weight: 900;
 }
 
+header h1 span {
+  font-weight: 900;
+}
+
 header h3 {
   font-size: 2rem;
   font-weight: 400;
   padding: 20px;
+}
+
+header h3 span {
+  font-weight: bold;
 }
 
 .col-12 p:first-child {
@@ -200,6 +208,7 @@ header h3 {
 }
 
 .icon-background:hover {
+  cursor: pointer;
   background-image: url("../icons/background-active-red.png");
 }
 
@@ -239,6 +248,7 @@ header h3 {
 }
 
 #scroller img.bounce:hover {
+  cursor: pointer;
   background-image: url("../icons/bloody-scroller.png");
   background-repeat: no-repeat;
 }
@@ -382,6 +392,7 @@ header h3 {
 @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   header {
     padding-bottom: 95%;
+    height: auto;
   }
   header .grid-container {
     width: 100%;
@@ -436,9 +447,6 @@ header h3 {
   header .grid-container .row .col-12 {
     width: 100%;
   }
-  header .headings-wrapper .row:last-child {
-    padding-bottom: 30px;
-  }
   header .col-2 {
     width: 30vh !important;
   }
@@ -453,6 +461,7 @@ header h3 {
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1200px) {
   header {
     padding-bottom: 95%;
+    height: auto;
   }
   header .grid-container {
     width: 100%;
@@ -508,7 +517,7 @@ header h3 {
     width: 100%;
   }
   header .col-2 {
-    width: 30vh !important;
+    width: 50vh !important;
   }
   header .col-2.bottom {
     margin-top: 0 !important;
@@ -572,6 +581,154 @@ header h3 {
   header .grid-container .row .col-12 {
     width: 100%;
   }
+}
+
+nav {
+  width: 100%;
+  height: 145px;
+  background-color: white;
+}
+
+.main-width {
+  margin: 0 auto;
+  width: 65vw;
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #676767;
+}
+
+.nav-name span {
+  color: #732612;
+}
+
+.hamburger-menu {
+  float: right;
+  padding: 9px;
+  display: block;
+  cursor: pointer;
+  display: none;
+}
+
+.line {
+  width: 100px;
+  height: 25px;
+  background-color: #732612;
+  border-radius: 5px;
+  margin: 3px 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 16px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #676767;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu li a:hover {
+  color: #732612;
+}
+
+@media only screen and (max-device-width: 768px) {
+  nav {
+    height: auto;
+  }
+  nav .main-width {
+    width: 100%;
+    height: 145px;
+    display: block;
+  }
+  nav .nav-name {
+    padding-top: 53px;
+    float: left;
+  }
+  nav .hamburger-menu {
+    display: block;
+    padding-top: 29px;
+  }
+  nav .menu {
+    clear: both;
+    display: none;
+    border: 2px solid #732612;
+  }
+  nav .menu li {
+    text-align: center;
+    margin: 0 !important;
+    background-color: #b58c82;
+    border-bottom: 1px solid #732612;
+  }
+  nav .menu li a {
+    line-height: 40px;
+  }
+  nav .add-auto-height {
+    height: auto;
+  }
+  nav .show {
+    display: block;
+  }
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1200px) {
+  .main-width {
+    width: 100vw;
+    display: block;
+  }
+  .main-width .nav-name {
+    padding: 30px;
+    text-align: center;
+  }
+  .main-width .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) and (max-device-width: 1493px) {
+  .main-width {
+    width: 90vw;
+  }
+}
+
+#section1 {
+  width: 100%;
+  height: 800px;
+  background-color: #a57472;
+  opacity: 0.3;
+}
+
+.divix {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+}
+
+#about-us {
+  width: 100%;
+  height: 1030px;
+  background: darkred;
+}
+
+#parallax1 {
+  width: 100%;
+  height: 625px;
+  background-image: url("../icons/batlleship1parallax.png");
+  background-size: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
