@@ -1,8 +1,5 @@
-@include grid-system(12, 65vw, 4px);
-// hmmm grid  musi byc w tym miejscu bo inaczej wyskakuje blad, malo tego nie widzi wtedy _variables
-
+@include grid-system(12, 65vw, 4px); // hmmm grid  musi byc w tym miejscu bo inaczej wyskakuje blad, malo tego nie widzi wtedy _variables
 //*******************HEADER*************************
-
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -41,6 +38,10 @@ header h1 {
     font-size: 4rem;
     text-transform: uppercase;
     font-weight: 900;
+
+    span {
+        font-weight: 900;
+    }
     @extend %center;
 }
 
@@ -48,6 +49,10 @@ header h3 {
     font-size: 2rem;
     font-weight: 400;
     padding: 20px;
+
+    span {
+        font-weight: bold;
+    }
     @extend %center;
 }
 
@@ -95,6 +100,7 @@ header h3 {
     }
 
     &:hover {
+        cursor: pointer;
         background-image: url("../icons/background-active-red.png");
     }
 }
@@ -109,6 +115,7 @@ header h3 {
         @include bounce(bounce 3s infinite);
 
         &:hover {
+            cursor: pointer;
             background-image: url("../icons/bloody-scroller.png");
             background-repeat: no-repeat;
         }
@@ -117,7 +124,6 @@ header h3 {
 //**********************************************
 //*****************media querries***************
 //**********************************************
-
 //*****smartphones
 @media only screen and #{$smartphones} {
     header {
@@ -157,16 +163,16 @@ header h3 {
     }
 }
 //*****tablets
-
 //need centering!!!!!!!!!!!!!
 @media only screen and #{$tablets} {
     header {
         @include grid-system(12, 100vw, 4px);
         padding-bottom: 95%;
+        height: auto;
 
-        .headings-wrapper .row:last-child {
-            padding-bottom: 30px;
-        }
+        // .headings-wrapper .row:last-child {
+            // padding-bottom: 30px;
+        // }
 
         .col-2 {
             width: 30vh !important;
@@ -182,15 +188,15 @@ header h3 {
     }
 }
 //*****tablets2
-
 //need centering!!!!!!!!!!!!!!!!!!!
 @media only screen and #{$tablets2} {
     header {
         @include grid-system(12, 100vw, 0);
         padding-bottom: 95%;
+        height: auto;
 
         .col-2 {
-            width: 30vh !important;
+            width: 50vh !important;
             // margin-left: auto 30px !important;
             &.bottom {
                 margin-top: 0 !important;
