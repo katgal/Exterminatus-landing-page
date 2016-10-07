@@ -3,6 +3,41 @@
 width:100%;
 height:625px;
 background-image: url("../icons/batlleship1parallax.png");
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
 background-size: cover;
 
+//add bloody redish layer Emperor will be proud
+box-shadow: inset 0 0 0 1000px rgba(115, 38, 18,.3);
+position: relative;
+
+// opacity: 0.3;
+//blur option
+/*
+-webkit-filter: blur(1px);
+ -moz-filter: blur(1px);
+ -o-filter: blur(1px);
+ -ms-filter: blur(1px);
+ filter: blur(1px);
+*/
+}
+
+
+
+.sentence-wrapper{
+  position: absolute;
+left: 0;
+top: 50%;
+width: 100%;
+text-align: center;
+color: #000;
+}
+
+.border{
+background-color: #111;
+color: #fff;
+padding: 18px;
+font-size: 25px;
+letter-spacing: 10px;
 }

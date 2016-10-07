@@ -528,6 +528,9 @@ header h3 span {
 }
 
 @media only screen and (min-device-width: 1201px) and (max-device-width: 1493px) {
+  header {
+    height: auto;
+  }
   header .grid-container {
     width: 100%;
     max-width: 80vw;
@@ -736,7 +739,36 @@ nav {
   width: 100%;
   height: 625px;
   background-image: url("../icons/batlleship1parallax.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(115, 38, 18, 0.3);
+  position: relative;
+  /*
+-webkit-filter: blur(1px);
+ -moz-filter: blur(1px);
+ -o-filter: blur(1px);
+ -ms-filter: blur(1px);
+ filter: blur(1px);
+*/
+}
+
+.sentence-wrapper {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
 }
 
 #team-and-skills {

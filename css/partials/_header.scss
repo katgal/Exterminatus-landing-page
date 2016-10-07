@@ -212,5 +212,6 @@ header h3 {
 @media only screen and #{$desktop} {
     header {
         @include grid-system(12, 80vw, 0);
+        height: auto;
     }
 }
