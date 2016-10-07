@@ -38,7 +38,7 @@ $(document).ready(function() {
 
                 $(this).attr('style', "").toggleClass("show");
             });
-            //****adding class height:auto to .main-width for better look of webopage (menu not override section1)
+            //****adding class height:auto to .main-width for better look of webopage (menu will not override section1)
             mainWidth.toggleClass("add-auto-height");
         });
     }
@@ -50,6 +50,18 @@ $(document).ready(function() {
 
     function stickyMenu() {
 
+        var navMenu = $("#scroll-destination");
+        var navMenuTopPosition = navMenu.offset().top;
+
+        $(window).on("scroll", function() {
+            var scrollTop = $(document).scrollTop();
+
+            if (scrollTop > navMenuTopPosition) {
+                navMenu.addClass("sticky");
+            } else {
+                navMenu.removeClass("sticky");
+            }
+        });
     }
     stickyMenu();
 

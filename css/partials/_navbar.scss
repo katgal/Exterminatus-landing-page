@@ -23,6 +23,7 @@ nav {
     }
 }
 //*************hamburger icon******************
+
 .hamburger-menu {
     float: right;
     padding: 9px;
@@ -38,11 +39,11 @@ nav {
     border-radius: 5px;
     margin: 3px 0;
 }
-
 //***************vanilla menu/horizontal******************
 .menu {
     list-style: none;
     display: flex;
+
     li {
         margin: 0 16px;
 
@@ -59,10 +60,18 @@ nav {
         }
     }
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    //z-index fixes problem with section 1
+    z-index: 1;
+    margin: 15px 0;
+}
 //**********************************************
 //*****************media querries***************
 //**********************************************
-
 //**** smartphones and biggersmartphones******
 @media only screen and (max-device-width: 768px) {
     nav {
@@ -83,7 +92,8 @@ nav {
             display: block;
             padding-top: 29px;
         }
-//**************hamburger menu/vertical************
+        //**************hamburger menu/vertical************
+
         .menu {
             clear: both;
             display: none;
@@ -100,11 +110,13 @@ nav {
                 }
             }
         }
-//****adding class height:auto to .main-width for better look of webopage (menu not override section1)
+        //****adding class height:auto to .main-width for better look of webopage (menu not override section1)
+
         .add-auto-height {
             height: auto;
         }
-//***************** class for menu animation***********
+        //***************** class for menu animation***********
+
         .show {
             display: block;
         }
