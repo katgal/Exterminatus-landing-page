@@ -11,7 +11,9 @@ background-size: cover;
 //add bloody redish layer Emperor will be proud
 box-shadow: inset 0 0 0 1000px rgba(115, 38, 18,.3);
 position: relative;
-
+display: flex;
+align-items: center;
+justify-content: center;
 // opacity: 0.3;
 //blur option
 /*
@@ -21,23 +23,36 @@ position: relative;
  -ms-filter: blur(1px);
  filter: blur(1px);
 */
-}
-
-
 
 .sentence-wrapper{
-  position: absolute;
-left: 0;
-top: 50%;
-width: 100%;
-text-align: center;
-color: #000;
+  display: flex;
+  flex-direction: column;
+  .student-icon{
+  margin:0 auto;
+  opacity: 0.5;
 }
+// position: absolute;
+// left: 0;
+// top: 50%;
+// width: 100%;
+  text-align: center;
+  color: #000;
 
 .border{
-background-color: #111;
-color: #fff;
-padding: 18px;
-font-size: 25px;
-letter-spacing: 10px;
+  background-color: #111;
+  opacity:0.5;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  margin-top: 40px;
+}
+}
+}
+
+@media only screen and (max-device-width:744px){
+  .border{
+  padding:0;
+  line-height: 45px;
+  }
 }

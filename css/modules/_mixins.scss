@@ -42,3 +42,51 @@
     animation-fill-mode: both;
 }
 */
+
+// @mixin multiBrowserKeyFrames($name){
+    // @keyframes #{$name}{
+        // @content;
+    // }
+// }
+
+  // @-webkit-keyframes multiBrowserKeyFrames($name){
+    // @keyframes #{$name}{
+        // @content;
+    // }
+// }
+
+// @include multiBrowserKeyFrames(loading){
+    // 0% {
+        // transform: rotate(50 deg)
+    // }
+// }
+
+/*
+@mixin media{
+  header {
+        @include grid-system(12, 100vw, 4px);
+        padding-bottom: 95%;
+        height: auto;
+
+        // .headings-wrapper .row:last-child {
+            // padding-bottom: 30px;
+        // }
+
+        .col-2 {
+            // change from vh(sic!)
+            //50% 2 columns (from 33%)
+            width: 50% !important;
+            height:auto;
+            // margin-left: auto 30px !important;
+            // margin:50px 0 !important;
+            &.bottom {
+                margin-top: 0 !important;
+            }
+        }
+
+        #scroller {
+            display: none;
+        }
+    }
+}
+*/

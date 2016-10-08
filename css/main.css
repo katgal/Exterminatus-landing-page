@@ -10,6 +10,35 @@
     animation-fill-mode: both;
 }
 */
+/*
+@mixin media{
+  header {
+        @include grid-system(12, 100vw, 4px);
+        padding-bottom: 95%;
+        height: auto;
+
+        // .headings-wrapper .row:last-child {
+            // padding-bottom: 30px;
+        // }
+
+        .col-2 {
+            // change from vh(sic!)
+            //50% 2 columns (from 33%)
+            width: 50% !important;
+            height:auto;
+            // margin-left: auto 30px !important;
+            // margin:50px 0 !important;
+            &.bottom {
+                margin-top: 0 !important;
+            }
+        }
+
+        #scroller {
+            display: none;
+        }
+    }
+}
+*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -52,7 +81,7 @@ table {
 
 .grid-container {
   width: 100%;
-  max-width: 65vw;
+  max-width: 65%;
   margin: 0 auto;
 }
 
@@ -66,7 +95,7 @@ table {
   float: left;
   min-height: 1px;
   margin: 0;
-  padding: 4px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -196,6 +225,7 @@ header h3 span {
   background-position: center;
   background-repeat: no-repeat;
   padding: 40px;
+  margin: 0 auto;
 }
 
 .icon-background .inner-icon {
@@ -321,7 +351,7 @@ header h3 span {
   }
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
   header {
     padding-bottom: 95%;
   }
@@ -389,7 +419,7 @@ header h3 span {
   }
 }
 
-@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   header {
     padding-bottom: 95%;
     height: auto;
@@ -448,7 +478,8 @@ header h3 span {
     width: 100%;
   }
   header .col-2 {
-    width: 30vh !important;
+    width: 50% !important;
+    height: auto;
   }
   header .col-2.bottom {
     margin-top: 0 !important;
@@ -517,7 +548,7 @@ header h3 span {
     width: 100%;
   }
   header .col-2 {
-    width: 50vh !important;
+    width: 50% !important;
   }
   header .col-2.bottom {
     margin-top: 0 !important;
@@ -745,6 +776,9 @@ nav {
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(115, 38, 18, 0.3);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /*
 -webkit-filter: blur(1px);
  -moz-filter: blur(1px);
@@ -754,21 +788,33 @@ nav {
 */
 }
 
-.sentence-wrapper {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
+#parallax1 .sentence-wrapper {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: #000;
 }
 
-.border {
+#parallax1 .sentence-wrapper .student-icon {
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+#parallax1 .sentence-wrapper .border {
   background-color: #111;
+  opacity: 0.5;
   color: #fff;
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+  margin-top: 40px;
+}
+
+@media only screen and (max-device-width: 744px) {
+  .border {
+    padding: 0;
+    line-height: 45px;
+  }
 }
 
 #team-and-skills {
