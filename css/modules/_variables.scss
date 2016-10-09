@@ -10,10 +10,10 @@ $twitter-color: rgb(0, 182, 241);
 $google-color: rgb(221, 80, 68);
 
 //media queries breakpoints
-$smartphones: "(min-device-width : 320px) and (max-device-width : 480px)";
+$smartphones: "(min-width : 320px) and (max-width : 480px)";
 // not 768px beacuse of 768 × 1024 resolution
-$bigger-smartphones: "(min-device-width : 481px) and (max-device-width : 767px)";
-$tablets: "(min-device-width : 768px) and (max-device-width : 1024px)";
-$tablets2: "(min-device-width : 1025px ) and (max-device-width : 1200px)";
-$desktop: "(min-device-width : 1201px ) and (max-device-width : 1493px)";
-$desktop2: "(min-device-width : 1494px)";
+$bigger-smartphones: "(min-width : 481px) and (max-width : 767px)";
+$tablets: "(min-width : 768px) and (max-width : 1024px)";
+$tablets2: "(min-width : 1025px ) and (max-width : 1200px)";
+$desktop: "(min-width : 1201px ) and (max-width : 1493px)";
+$desktop2: "(min-width : 1494px)";

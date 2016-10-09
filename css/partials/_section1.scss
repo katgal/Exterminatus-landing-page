@@ -1,13 +1,114 @@
+@include grid-system(12, 65vw, 0);
+
 
 #section1{
   width:100%;
   height:800px;
   background-color: $additional-color;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
-.divix{
-  width: 30px;
-  height:30px;
-  background-color: green;
+.img-holder{
+text-align: center;
+  margin:0 auto;
+  height:186px;
+  width:172px;
 }
+.heart{
+  background-image: url("../icons/heart.png");
+  &:hover{
+    background-image: url("../icons/bloodheart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.diamond{
+  background-image: url("../icons/diamond.png");
+  &:hover{
+    background-image: url("../icons/blooddiamand.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.cup{
+  background-image: url("../icons/cup.png");
+  &:hover{
+    background-image: url("../icons/bloodcup.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.phone{
+  background-image: url("../icons/phone.png");
+  &:hover{
+    background-image: url("../icons/bloodphone.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.col-3{
+  margin-top: 175px!important;
+
+}
+.icons4-wrapper{
+  h3{
+    font-size: 1.4rem;
+text-align: center;
+font-weight: bold;
+line-height: 26px;
+margin: 20px 0;
+  }
+  p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+// $smartphones: "(min-device-width : 320px) and (max-device-width : 480px)";
+@media only screen and #{$smartphones}{
+@include grid-system(12, 100vw, 4px);
+#section1{
+  height:auto;
+.col-3{
+  width:100% !important;
+  margin-top:50px!important;
+  // margin-bottom:10px;
+}}
+}
+// $bigger-smartphones: "(min-device-width : 481px) and (max-device-width : 767px)";
+@media only screen and #{$bigger-smartphones}{
+@include grid-system(12, 100vw, 4px);
+#section1{
+  height:auto;
+.col-3{
+  width:50% !important;
+  margin-top:50px!important;
+  margin-bottom:50px;
+}}
+}
+// $tablets: "(min-device-width : 768px) and (max-device-width : 1024px)";
+@media only screen and #{$tablets}{
+  @include grid-system(12, 100vw,4);
+}
+//$tablets2: "(min-device-width : 1025px ) and (max-device-width : 1200px)";
+@media only screen and #{$tablets2}{
+  @include grid-system(12, 100vw, 0);
+  #section1{
+    // height:auto;
+    .col-3{
+      // margin-top:50px!important;
+      // margin-bottom:50px;
+
+    }
+  }
+}
+// $desktop: "(min-device-width : 1201px ) and (max-device-width : 1493px)";
+@media only screen and #{$desktop}{
+  @include grid-system(12, 90vw, 0);
+}
+
+// .divix{
+  // width: 30px;
+  // height:30px;
+  // background-color: green;
+// }
