@@ -1,21 +1,27 @@
 @include grid-system(12, 65%, 0);
-// hmmm grid  musi byc w tym miejscu bo inaczej wyskakuje blad, malo tego nie widzi wtedy _variables
-//*******************HEADER*************************
+// grid have to be in this place, placed somewhere else scss screams that this is a pure heresy!
+
+//*********************************************
+//**************** header *********************
+//*********************************************
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
-//******************headings**********************
+
+//*********************************************
+//*************** headings ********************
+//*********************************************
 
 header {
     box-sizing: border-box;
     color: rgb(255,255,255);
     width: 100%;
-    height: 100vh; // musi byc vh bo 100% nie dziala
+    height: 100vh;
     max-height: 1100px;
     background-image: url("../icons/bloodmarine.png");
     background-repeat: no-repeat;
-    // background-size: 100% 100%;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -67,14 +73,15 @@ header h3 {
 .headings-wrapper .row:last-child {
     padding-bottom: 100px;
 }
-//***************icons****************
+
+//*********************************************
+//**************** icons **********************
+//*********************************************
 
 .col-2 {
     width: 175px;
     height: 180px;
     @extend %center;
-    // display: flex;
-    // align-items: center;
 }
 
 .col-2.bottom {
@@ -88,10 +95,9 @@ header h3 {
     background-image: url("../icons/background.png");
     background-position: center;
     background-repeat: no-repeat;
-    // position: relative;
     padding: 40px;
     //margin solve problem with icons centering
-    margin:0 auto;
+    margin: 0 auto;
 
     .inner-icon {
         padding-bottom: 23px;
@@ -107,7 +113,10 @@ header h3 {
         background-image: url("../icons/background-active-red.png");
     }
 }
-//***************scroller icon*****************
+
+//*********************************************
+//************* scroller-icon *****************
+//*********************************************
 
 #scroller {
     width: 90px;
@@ -124,100 +133,65 @@ header h3 {
         }
     }
 }
-//**********************************************
-//*****************media querries***************
-//**********************************************
-//*****smartphones
+
+//*********************************************
+//************ media queries ******************
+//*********************************************
+//************* smartphones *******************
 @media only screen and #{$smartphones} {
     header {
-        @include grid-system(12, 100vw, 4px);
-        padding-bottom: 95%;
+        @include mediaSmartphones;
 
         h1 {
             font-size: 2rem;
         }
-
-        .col-2 {
-            display: none;
-        }
-
-        #scroller {
-            display: none;
-        }
     }
 }
-//*****bigger-smartphones
+///********* bigger smartphones ***************
 @media only screen and #{$bigger-smartphones} {
     header {
-        @include grid-system(12, 100vw, 4px);
-        padding-bottom: 95%;
-// .icons-wrapper{
-    // margin:0 auto;
-// }
+        @include mediaSmartphones;
+
         h1 {
             font-size: 2.5rem;
         }
-
-        .col-2 {
-            display: none;
-        }
-
-        #scroller {
-            display: none;
-        }
     }
 }
-//*****tablets
-//need centering!!!!!!!!!!!!!
+//*************** tablets ********************
 @media only screen and #{$tablets} {
     header {
-        @include grid-system(12, 100vw, 4px);
-        padding-bottom: 95%;
-        height: auto;
-
-        // .headings-wrapper .row:last-child {
-            // padding-bottom: 30px;
-        // }
+        @include grid-system(12, 90vw, 4px);
+        @include mediaTablets;
 
         .col-2 {
-            // change from vh(sic!)
+            // change from vw
             //50% 2 columns (from 33%)
             width: 50% !important;
-            height:auto;
-            // margin-left: auto 30px !important;
-            // margin:50px 0 !important;
+            height: auto;
+
             &.bottom {
                 margin-top: 0 !important;
             }
         }
-
-        #scroller {
-            display: none;
-        }
     }
 }
-//*****tablets2
-//need centering!!!!!!!!!!!!!!!!!!!
+//*************** tablets2 ********************
 @media only screen and #{$tablets2} {
     header {
-        @include grid-system(12, 100vw, 0);
-        padding-bottom: 95%;
-        height: auto;
+        @include grid-system(12, 85vw, 0);
+        @include mediaTablets;
 
         .col-2 {
             width: 50% !important;
-            // margin-left: auto 30px !important;
-            &.bottom {
-                margin-top: 0 !important;
-            }
-        }
 
-        #scroller {
-            display: none;
+            &.bottom {
+                margin-top: 15px !important;
+                margin-bottom: 15px !important;
+            }
         }
     }
 }
-//*****desktop
+//*************** desktop *********************
 @media only screen and #{$desktop} {
     header {
         @include grid-system(12, 80vw, 0);

@@ -1,18 +1,16 @@
-@mixin grid-system($col-count:12,$max-width:1200px, $gutter-size:12px) {
 
+// @mixin grid-system($col-count:12,$max-width:1200px, $gutter-size:12px) {
+@mixin grid-system($col-count,$max-width, $gutter-size) {
     $oneColWidth: 100%/$col-count;
 
     .grid-container {
         width: 100%;
-        // max-width: 1200px;
         max-width: $max-width;
         margin: 0 auto;
-        // background: green;
         // * {
         // box-sizing: border-box;
         // }
         .row {
-            // background: orange;
             &::after,
             &::before {
                 content: "";
@@ -24,7 +22,6 @@
                 float: left;
                 min-height: 1px;
                 margin: 0;
-                // background: blue;
                 // gutter
                 padding: $gutter-size;
                 box-sizing: border-box;

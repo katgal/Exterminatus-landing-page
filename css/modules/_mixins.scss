@@ -1,5 +1,8 @@
 
+
+//*********************************************
 //mixin for animated icon (#scroller) in HEADER
+//*********************************************
 @mixin bounce($animation) {
      @-webkit-keyframes bounce{
         0%,100%,20%,50%,80% {
@@ -30,63 +33,30 @@
     -webkit-animation: $animation;
     animation: $animation;
 }
-/*
-.animated {
-    -webkit-animation-name: bounce;
-    animation-name: bounce;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-     -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-*/
 
-// @mixin multiBrowserKeyFrames($name){
-    // @keyframes #{$name}{
-        // @content;
-    // }
-// }
+//*********************************************
+//*********** mixins for HEADER ***************
+//*********************************************
 
-  // @-webkit-keyframes multiBrowserKeyFrames($name){
-    // @keyframes #{$name}{
-        // @content;
-    // }
-// }
+//*********** all smartphones *****************
+@mixin mediaSmartphones {
+     @include grid-system(12, 100vw, 4px);
+    padding-bottom: 95%;
 
-// @include multiBrowserKeyFrames(loading){
-    // 0% {
-        // transform: rotate(50 deg)
-    // }
-// }
+    .col-2 {
+        display: none;
+    }
 
-/*
-@mixin media{
-  header {
-        @include grid-system(12, 100vw, 4px);
-        padding-bottom: 95%;
-        height: auto;
-
-        // .headings-wrapper .row:last-child {
-            // padding-bottom: 30px;
-        // }
-
-        .col-2 {
-            // change from vh(sic!)
-            //50% 2 columns (from 33%)
-            width: 50% !important;
-            height:auto;
-            // margin-left: auto 30px !important;
-            // margin:50px 0 !important;
-            &.bottom {
-                margin-top: 0 !important;
-            }
-        }
-
-        #scroller {
-            display: none;
-        }
+    #scroller {
+        display: none;
     }
 }
-*/
+//************** all tablets ******************
+@mixin mediaTablets {
+    padding-bottom: 95%;
+    height: auto;
+
+    #scroller {
+        display: none;
+    }
+}

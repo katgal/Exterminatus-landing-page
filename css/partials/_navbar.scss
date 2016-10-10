@@ -22,7 +22,9 @@ nav {
         color: $main-color;
     }
 }
-//*************hamburger icon******************
+//*********************************************
+//************ hamburger icon *****************
+//*********************************************
 
 .hamburger-menu {
     float: right;
@@ -39,7 +41,10 @@ nav {
     border-radius: 5px;
     margin: 3px 0;
 }
-//***************vanilla menu/horizontal******************
+//*********************************************
+//******** vanilla menu/horizontal ************
+//*********************************************
+
 .menu {
     list-style: none;
     display: flex;
@@ -69,9 +74,9 @@ nav {
     z-index: 1;
     margin: 15px 0;
 }
-//**********************************************
-//*****************media querries***************
-//**********************************************
+//*********************************************
+//*****************media querries**************
+//*********************************************
 //**** smartphones and biggersmartphones******
 @media only screen and (max-device-width: 768px) {
     nav {
@@ -92,8 +97,9 @@ nav {
             display: block;
             padding-top: 29px;
         }
-        //**************hamburger menu/vertical************
-
+        //*********************************************
+        //*********** hamburger menu/vertical *********
+        //*********************************************
         .menu {
             clear: both;
             display: none;
@@ -111,18 +117,20 @@ nav {
             }
         }
         //****adding class height:auto to .main-width for better look of webopage (menu not override section1)
-
         .add-auto-height {
             height: auto;
         }
-        //***************** class for menu animation***********
-
+        //*********************************************
+        //*********** class for menu animation ********
+        //*********************************************
         .show {
             display: block;
         }
     }
 }
-//********tablets**********
+//*********************************************
+//*********** tablets/smaller desktops ********
+//*********************************************
 @media only screen and (min-device-width : 769px) and (max-device-width : 1200px) {
     .main-width {
         width: 100vw;
@@ -139,7 +147,9 @@ nav {
         }
     }
 }
-//**************smaller desktops***************
+//*********************************************
+//**************** small desktops *************
+//*********************************************
 @media only screen and #{$desktop} {
     .main-width {
         width: 90vw;
