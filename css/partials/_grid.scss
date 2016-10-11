@@ -1,5 +1,4 @@
 
-// @mixin grid-system($col-count:12,$max-width:1200px, $gutter-size:12px) {
 @mixin grid-system($col-count,$max-width, $gutter-size) {
     $oneColWidth: 100%/$col-count;
 

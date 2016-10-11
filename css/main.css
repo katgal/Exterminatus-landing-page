@@ -118,6 +118,7 @@ header {
   height: 100vh;
   max-height: 1100px;
   background-image: url("../icons/bloodmarine.png");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1102,13 +1103,19 @@ nav {
 #about-us {
   width: 100%;
   height: 1030px;
-  background: darkred;
 }
 
 #parallax1 {
+  background-image: url("../icons/batlleship1parallax.png");
+}
+
+#services {
+  background-image: url("../icons/marine.png");
+}
+
+#parallax1, #services {
   width: 100%;
   height: 625px;
-  background-image: url("../icons/batlleship1parallax.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1120,19 +1127,19 @@ nav {
   justify-content: center;
 }
 
-#parallax1 .sentence-wrapper {
+#parallax1 .sentence-wrapper, #services .sentence-wrapper {
   display: flex;
   flex-direction: column;
   text-align: center;
   color: #000;
 }
 
-#parallax1 .sentence-wrapper .student-icon {
+#parallax1 .sentence-wrapper .parallax-icon, #services .sentence-wrapper .parallax-icon {
   margin: 0 auto;
   opacity: 0.5;
 }
 
-#parallax1 .sentence-wrapper .border {
+#parallax1 .sentence-wrapper .border, #services .sentence-wrapper .border {
   background-color: #111;
   opacity: 0.5;
   color: #fff;
@@ -1149,10 +1156,16 @@ nav {
   }
 }
 
-#team-and-skills {
+#team {
   width: 100%;
   height: 1930px;
-  background: #750000;
+}
+
+#services-slider {
+  width: 100%;
+  height: 965px;
+  background-color: #a57472;
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=main.css.map */
