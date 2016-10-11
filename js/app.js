@@ -8,7 +8,7 @@ $(document).ready(function() {
     // console.log("That is the way to hell...");
 
     //**********************************************
-    //icon scroller************
+    //************** icon scroller *****************
     //**********************************************
     function scroll() {
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
 
     //**********************************************
-    //hamburger menu show hide animation************
+    //****** hamburger menu show-hide animation ****
     //**********************************************
     function animatedMenuScroll() {
         var hamburgerMenu = $(".hamburger-menu");
@@ -45,7 +45,7 @@ $(document).ready(function() {
     animatedMenuScroll();
 
     //**********************************************
-    //sticky menu ************
+    //************** sticky menu *******************
     //**********************************************
 
     function stickyMenu() {
@@ -64,5 +64,52 @@ $(document).ready(function() {
         });
     }
     stickyMenu();
+
+    //**********************************************
+    //************ nav scroll to ... ***************
+    //**********************************************
+
+    //****************** home **********************
+    function scrollTo() {
+
+        var menu = $(".menu");
+        var aElements = menu.find("a");
+
+        aElements.on("click", function() {
+
+            console.log("Don't think you can order ME around...");
+
+            var aHref = $(this).attr("href");
+            var target = $(aHref);
+
+            $("html, body").animate({
+                scrollTop: target.offset().top
+            }, 2000);
+        });
+    }
+    scrollTo();
+
+    //**********************************************
+    //*********** icons scroll to ... **************
+    //**********************************************
+
+    function scrollTo2() {
+
+        var wrapper = $(".icons-wrapper");
+        var divElements = wrapper.find(".icon-background");
+
+        divElements.on("click", function() {
+
+            console.log("Who are you to order me, fool?");
+
+            var divId = $(this).attr("id").substr(5);
+            var target = $("#" + divId);
+
+            $("html, body").animate({
+                scrollTop: target.offset().top
+            }, 2000);
+        });
+    }
+    scrollTo2();
 
 });
