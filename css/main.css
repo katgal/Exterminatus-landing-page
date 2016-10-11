@@ -167,6 +167,10 @@ header h3 span {
   padding-bottom: 100px;
 }
 
+.icons-wrapper {
+  padding-top: 70px;
+}
+
 .col-2 {
   width: 175px;
   height: 180px;
@@ -204,7 +208,7 @@ header h3 span {
 #scroller {
   width: 90px;
   height: 96px;
-  margin: auto 45%;
+  margin: auto 47%;
 }
 
 #scroller img.bounce {
@@ -436,6 +440,9 @@ header h3 span {
   header .grid-container .row .col-12 {
     width: 100%;
   }
+  header .icons-wrapper {
+    padding-top: 0;
+  }
   header #scroller {
     display: none;
   }
@@ -505,6 +512,9 @@ header h3 span {
   }
   header .grid-container .row .col-12 {
     width: 100%;
+  }
+  header .icons-wrapper {
+    padding-top: 0;
   }
   header #scroller {
     display: none;
@@ -644,10 +654,9 @@ nav {
   top: 0;
   left: 0;
   z-index: 1;
-  margin: 15px 0;
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-width: 768px) {
   nav {
     height: auto;
   }
@@ -686,7 +695,7 @@ nav {
   }
 }
 
-@media only screen and (min-device-width: 769px) and (max-device-width: 1200px) {
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
   .main-width {
     width: 100vw;
     display: block;

@@ -77,7 +77,9 @@ header h3 {
 //*********************************************
 //**************** icons **********************
 //*********************************************
-
+.icons-wrapper{
+    padding-top: 70px;
+}
 .col-2 {
     width: 175px;
     height: 180px;
@@ -121,8 +123,7 @@ header h3 {
 #scroller {
     width: 90px;
     height: 96px;
-    margin: auto 45%;
-
+    margin: auto 47%;
     img.bounce {
         @include bounce(bounce 3s infinite);
 

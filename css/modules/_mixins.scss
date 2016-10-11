@@ -55,6 +55,10 @@
 @mixin mediaTablets {
     padding-bottom: 95%;
     height: auto;
+    
+    .icons-wrapper{
+        padding-top: 0;
+    }
 
     #scroller {
         display: none;
