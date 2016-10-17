@@ -1,6 +1,188 @@
+@include grid-system(12, 65%, 4px);
 
-#about-us{
-  width:100%;
-  height:1030px;
-  // background: darkred;
+ //*********************************************
+//************ section title ******************
+//*********************************************
+
+#about-us {
+    width: 100%;
+    height: 1030px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 130px 0;
+}
+
+%border {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+.section-title {
+    font-size: 3rem;
+    padding: 30px;
+    color: $additional2-color;
+    position: relative;
+
+    span {
+        color: $main-color;
+    }
+
+    &::before {
+        @extend %border;
+        top: 70px;
+        left: -10px;
+        border-left: 3px solid $main-color;
+        border-bottom: 3px solid $main-color;
+    }
+
+    &::after {
+        @extend %border;
+        top: 18px;
+        left: 230px;
+        border-top: 3px solid $main-color;
+        border-right: 3px solid $main-color;
+    }
+}
+
+//*********************************************
+//********** devices/paragraph ****************
+//*********************************************
+
+#img-devices {
+    width: 655px;
+    height: 417px;
+    background-image: url("../icons/devices.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.about-section {
+    .row {
+        margin: 180px 0;
+        text-align: left;
+
+        p {
+            text-align: justify;
+            font-size: 1.1rem;
+            line-height: 35px;
+            padding-bottom: 130px;
+            display: block;
+        }
+    }
+
+    button {
+        width: 230px;
+        height: 75px;
+        font-size: 1.4rem;
+        color: rgb(255,255,255);
+        border-color: $main-color;
+        background-color: $main-color;
+        @include borderRadius(5px);
+
+        &:hover {
+            @include boxShadow(0, 1px, 2px, 0, black);
+            background: lighten($main-color, 5%);
+        }
+    }
+}
+
+//*********************************************
+//************ media queries ******************
+//*********************************************
+
+//************* smartphones *******************
+@media only screen and #{$smartphones} {
+    #about-us {
+        @include grid-system(12, 100%, 0);
+        @include smartphonesSection2;
+
+        .col-7 {
+            #img-devices {
+                display: none;
+            }
+        }
+    }
+}
+
+///********* bigger smartphones ***************
+@media only screen and #{$bigger-smartphones} {
+    #about-us {
+        @include grid-system(12, 100%, 0);
+        @include smartphonesSection2;
+
+        .col-7 {
+            width: 100% !important;
+
+            #img-devices {
+                width: 320px;
+                height: 240px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+//*************** tablets ********************
+@media only screen and #{$tablets} {
+    #about-us {
+        @include grid-system(12, 95%, 0);
+        @include tabletsSection2;
+
+        .col-7 {
+            //    width:100%;
+            #img-devices {
+                width: 380px;
+                height: 285px;
+                margin: 36px auto 0;
+            }
+        }
+    }
+}
+
+//*************** tablets2 ********************
+@media only screen and #{$tablets2} {
+    #about-us {
+        @include grid-system(12, 90%, 0);
+        @include tabletsSection2;
+
+        .col-7 {
+            //    width:100%;
+            #img-devices {
+                width: 450px;
+                height: 300px;
+                margin: 36px auto 0;
+            }
+        }
+    }
+}
+
+//*************** desktop *********************
+@media only screen and #{$desktop} {
+    #about-us {
+        @include grid-system(12, 80%, 0);
+
+        .col-7 {
+            #img-devices {
+                width: 550px;
+                height: 390px;
+            }
+        }
+    }
+}
+
+//*************** desktop3 ********************
+@media only screen and #{$desktop3} {
+    #about-us {
+        @include grid-system(12, 70%, 0);
+
+        .col-7 {
+            #img-devices {
+                width: 580px;
+                height: 380px;
+            }
+        }
+    }
 }

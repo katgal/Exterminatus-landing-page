@@ -1,6 +1,22 @@
 
 
 //*********************************************
+//***************border-radius*****************
+//*********************************************
+@mixin borderRadius($value) {
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    border-radius: $value;
+}
+//*********************************************
+//*************** box-shadow *****************
+//*********************************************
+@mixin boxShadow($top, $left, $blur, $spread, $color) {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+}
+//*********************************************
 //mixin for animated icon (#scroller) in HEADER
 //*********************************************
 @mixin bounce($animation) {
@@ -40,7 +56,8 @@
 
 //*********** all smartphones *****************
 @mixin mediaSmartphones {
-     @include grid-system(12, 100vw, 4px);
+    // header {
+    @include grid-system(12, 100vw, 4px);
     padding-bottom: 95%;
 
     .col-2 {
@@ -50,17 +67,72 @@
     #scroller {
         display: none;
     }
+    // }
 }
+
 //************** all tablets ******************
 @mixin mediaTablets {
+    // header {
     padding-bottom: 95%;
     height: auto;
-    
-    .icons-wrapper{
+
+    .icons-wrapper {
         padding-top: 0;
     }
 
     #scroller {
         display: none;
     }
+    // }
+}
+
+//*********************************************
+//****** mixins for sectio2 about us **********
+//*********************************************
+
+//************* smartphones *******************
+@mixin smartphonesSection2 {
+    // #about-us {
+    height: auto;
+    padding: 90px 0 0;
+
+    .row {
+        margin: 100px 0;
+        // .col-7{}
+        .col-5 {
+            text-align: center;
+            width: 100% !important;
+
+            p {
+                padding: 20px 20px 50px !important;
+            }
+
+            button {
+                margin: 20px;
+            }
+        }
+    }
+    // }
+}
+
+//*************** tablets ********************
+@mixin tabletsSection2 {
+    // #about-us {
+    height: auto;
+    padding: 90px 0 0;
+
+    .row {
+        margin: 100px 0;
+        // .col-7{}
+        .col-5 {
+            p {
+                padding: 20px 20px 50px !important;
+            }
+
+            button {
+                margin: 20px;
+            }
+        }
+    }
+    // }
 }
