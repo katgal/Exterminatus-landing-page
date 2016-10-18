@@ -139,7 +139,7 @@ header h1, header h3, .col-12 p:first-child, .col-2 {
 }
 
 header h1 {
-  font-size: 4rem;
+  font-size: 4.4rem;
   text-transform: uppercase;
   font-weight: 900;
 }
@@ -149,7 +149,7 @@ header h1 span {
 }
 
 header h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
   padding: 20px;
 }
@@ -162,14 +162,11 @@ header h3 span {
   font-weight: 300;
   line-height: 1.3rem;
   padding: 0 20px;
+  font-size: 1.1rem;
 }
 
 .headings-wrapper .row:last-child {
   padding-bottom: 100px;
-}
-
-.icons-wrapper {
-  padding-top: 70px;
 }
 
 .col-2 {
@@ -311,7 +308,13 @@ header h3 span {
     display: none;
   }
   header h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
+  }
+  header h3 {
+    font-size: 1.9rem;
+  }
+  header p {
+    font-size: 1rem !important;
   }
 }
 
@@ -379,7 +382,7 @@ header h3 span {
     display: none;
   }
   header h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -448,8 +451,8 @@ header h3 span {
     display: none;
   }
   header .col-2 {
-    width: 50% !important;
-    height: auto;
+    width: 33% !important;
+    height: 260px;
   }
   header .col-2.bottom {
     margin-top: 0 !important;
@@ -621,6 +624,10 @@ nav {
   display: none;
 }
 
+.hamburger-menu:hover .line {
+  background-color: #851b00;
+}
+
 .line {
   width: 100px;
   height: 25px;
@@ -654,7 +661,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 768px) {
@@ -684,6 +691,9 @@ nav {
     margin: 0 !important;
     background-color: #b58c82;
     border-bottom: 1px solid #732612;
+  }
+  nav .menu li:hover {
+    background-color: #c8a9a2;
   }
   nav .menu li a {
     line-height: 40px;

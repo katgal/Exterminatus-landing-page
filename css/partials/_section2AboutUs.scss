@@ -77,13 +77,13 @@
         width: 230px;
         height: 75px;
         font-size: 1.4rem;
-        color: rgb(255,255,255);
+        color: $minor1-color;
         border-color: $main-color;
         background-color: $main-color;
         @include borderRadius(5px);
 
         &:hover {
-            @include boxShadow(0, 1px, 2px, 0, black);
+            @include boxShadow(0, 1px, 2px, 0, $minor2-color);
             background: lighten($main-color, 5%);
         }
     }

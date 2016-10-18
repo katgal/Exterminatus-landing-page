@@ -16,10 +16,11 @@ body {
 
 header {
     box-sizing: border-box;
-    color: rgb(255,255,255);
+    color: $minor1-color;
     width: 100%;
     height: 100vh;
     max-height: 1100px;
+    // height:1100px;
     background-image: url("../icons/bloodmarine.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -43,7 +44,8 @@ header {
 }
 
 header h1 {
-    font-size: 4rem;
+    // font-size: 4rem;
+    font-size: 4.4rem;
     text-transform: uppercase;
     font-weight: 900;
 
@@ -54,7 +56,8 @@ header h1 {
 }
 
 header h3 {
-    font-size: 2rem;
+    // font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 400;
     padding: 20px;
 
@@ -69,6 +72,8 @@ header h3 {
     line-height: 1.3rem;
     padding: 0 20px;
     @extend %center;
+    /// added font-size
+    font-size: 1.1rem;
 }
 
 .headings-wrapper .row:last-child {
@@ -78,9 +83,11 @@ header h3 {
 //*********************************************
 //**************** icons **********************
 //*********************************************
-.icons-wrapper{
-    padding-top: 70px;
-}
+// with padding-top in .icons-wrapper looks better on chrome but...
+// in IE and mMzilla looks not right(Scroll icon is half-off the screen)
+// .icons-wrapper{
+    // padding-top: 60px;
+// }
 .col-2 {
     width: 175px;
     height: 180px;
@@ -139,13 +146,25 @@ header h3 {
 //*********************************************
 //************ media queries ******************
 //*********************************************
+
+// I am aware that using !important is not the best way write code but...in this case is rather difficult to do so...
+//I will try to figure it out how to erase this heresy from my code
+
 //************* smartphones *******************
 @media only screen and #{$smartphones} {
     header {
         @include mediaSmartphones;
 
         h1 {
-            font-size: 2rem;
+            // font-size: 2rem;
+            font-size: 2.3rem;
+        }
+        //added h3, p font-size
+        h3{
+            font-size: 1.9rem;
+        }
+        p{
+            font-size: 1rem !important;
         }
     }
 }
@@ -155,7 +174,8 @@ header h3 {
         @include mediaSmartphones;
 
         h1 {
-            font-size: 2.5rem;
+            // font-size: 2.5rem;
+            font-size: 3.5rem;
         }
     }
 }
@@ -167,9 +187,10 @@ header h3 {
 
         .col-2 {
             // change from vw
-            //50% 2 columns (from 33%)
-            width: 50% !important;
-            height: auto;
+            //50% 2 columns (33% 3 columns)
+            width: 33% !important;
+            // height: auto;
+            height:260px;
 
             &.bottom {
                 margin-top: 0 !important;
