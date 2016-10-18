@@ -113,3 +113,30 @@ $(document).ready(function() {
     scrollTo2();
 
 });
+
+//**********************************************
+//*** section 2 show-hide animation on scroll **
+//**********************************************
+
+function scrollSection2() {
+
+    var devicesImg = $("#img-devices");
+    //I have to indicate section 1 right above section2 to get desired effect
+    var section1 = $("#section1");
+    var section1Position = section1.offset().top;
+    var paragraphWrap = $(".paragraph-wrapper");
+
+    $(window).on("scroll", function() {
+        if ($(this).scrollTop() > section1Position && $(window).width() > 480) {
+            devicesImg.fadeIn(1000);
+            paragraphWrap.fadeIn(1000);
+        } else {
+            if ($(window).width() > 480) {
+                paragraphWrap.fadeOut();
+            }
+            devicesImg.fadeOut();
+        }
+    });
+}
+
+scrollSection2();
