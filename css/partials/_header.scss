@@ -59,7 +59,9 @@ header h3 {
     // font-size: 2rem;
     font-size: 2.5rem;
     font-weight: 400;
-    padding: 20px;
+    // padding: 20px; // had to change bc of 1600x900
+    padding: 9px;
+
 
     span {
         font-weight: bold;

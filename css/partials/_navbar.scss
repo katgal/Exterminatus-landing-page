@@ -22,6 +22,7 @@ nav {
         color: $main-color;
     }
 }
+
 //*********************************************
 //************ hamburger icon *****************
 //*********************************************
@@ -29,11 +30,14 @@ nav {
 .hamburger-menu {
     float: right;
     padding: 9px;
+    //change
+    padding-bottom: 0;
     display: block;
     cursor: pointer;
     display: none;
-    &:hover{
-        .line{
+
+    &:hover {
+        .line {
             background-color: saturate($main-color, 90%);
         }
     }
@@ -46,6 +50,7 @@ nav {
     border-radius: 5px;
     margin: 3px 0;
 }
+
 //*********************************************
 //******** vanilla menu/horizontal ************
 //*********************************************
@@ -71,6 +76,8 @@ nav {
     }
 }
 
+//********* sticky class for menu *************
+
 .sticky {
     position: fixed;
     top: 0;
@@ -78,14 +85,28 @@ nav {
     //z-index fixes problem with section 1
     z-index: 10;
     // margin: 15px 0;
-    // height:55px;
-    //  .main-width{
-        //  height:50px;
-    //  }
+    //height: 72;
+    height: 95px;
+    @include easeInOutBack;
+
+    .main-width {
+        //  height:66px;
+        height: 95px;
+
+        .nav-name {
+            padding: 20px 0 15px;
+        }
+
+        .hamburger-menu {
+            padding-top: 3px;
+        }
+    }
 }
+
 //*********************************************
 //*****************media querries**************
 //*********************************************
+
 //**** smartphones and biggersmartphones******
 @media only screen and (max-width: 768px) {
     nav {
@@ -106,9 +127,11 @@ nav {
             display: block;
             padding-top: 29px;
         }
+
         //*********************************************
         //*********** hamburger menu/vertical *********
         //*********************************************
+
         .menu {
             clear: both;
             display: none;
@@ -119,7 +142,8 @@ nav {
                 margin: 0 !important;
                 background-color: $accent-color;
                 border-bottom: 1px solid $main-color;
-                &:hover{
+
+                &:hover {
                     background-color: lighten($accent-color, 10%);
                 }
 
@@ -132,17 +156,21 @@ nav {
         .add-auto-height {
             height: auto;
         }
+
         //*********************************************
         //*********** class for menu animation ********
         //*********************************************
+
         .show {
             display: block;
         }
     }
 }
+
 //*********************************************
 //*********** tablets/smaller desktops ********
 //*********************************************
+
 @media only screen and (min-width : 769px) and (max-width : 1200px) {
     .main-width {
         width: 100vw;
@@ -159,9 +187,11 @@ nav {
         }
     }
 }
+
 //*********************************************
 //**************** small desktops *************
 //*********************************************
+
 @media only screen and #{$desktop} {
     .main-width {
         width: 90vw;
