@@ -618,7 +618,6 @@ nav {
 
 .hamburger-menu {
   float: right;
-  padding: 9px;
   padding-bottom: 0;
   display: block;
   cursor: pointer;
@@ -887,7 +886,7 @@ nav {
   margin-top: 175px !important;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 539px) {
   .grid-container {
     width: 100%;
     max-width: 100vw;
@@ -950,7 +949,7 @@ nav {
   }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
+@media only screen and (min-width: 540px) and (max-width: 1024px) {
   .grid-container {
     width: 100%;
     max-width: 100vw;
