@@ -1,6 +1,271 @@
+#team {
+    width: 100%;
+    height: 1930px;
+    @include mainSectionsStyling;
+}
+//*********************************************
+//**************** icons **********************
+//*********************************************
 
-#team{
-  width:100%;
-  height:1930px;
-  // background:rgb(117,0,0);
+.swap-icon {
+    height: 70px;
+    width: 65px;
+    display: inline-block;
+    margin-top: 130px;
+    cursor: pointer;
+    &.prev {
+        background-image: url("../icons/bloodarrL.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 5px;
+
+        &:hover {
+            background-image: url("../icons/bloodarrLh.png");
+        }
+    }
+
+    &.next {
+        background-image: url("../icons/bloodarrR.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 5px;
+
+        &:hover {
+            background-image: url("../icons/bloodarrRh.png");
+        }
+    }
+}
+//*********************************************
+//**************** slider *********************
+//*********************************************
+.slider{
+    width:65%;
+    overflow: hidden;
+    // border: 2px solid red;
+    margin: 0 auto;
+}
+.slider-container {
+    box-sizing: border-box;
+    height: 560px;
+    // width: 1000px;
+    width: 2400px;
+    margin: 90px auto;
+    padding: 45px 10px;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    // border: 2px solid red;
+
+    .slider-content {
+        // height:550px;//////
+        height: 90%;
+        width: 250px;
+        margin:auto 75px; // odległosci
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // align-items: center;
+        // align-content: space-around;
+        .hero-pic {
+            height: 250px;
+            width: 250px;
+            margin-bottom: 20px;
+            background-color: red;
+            @include borderRadius(50%);
+        }
+
+        p:nth-child(2) {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        p:nth-child(3) {
+            font-size: 1.5rem;
+            color: $additional2-color;
+            margin: 20px 0;
+        }
+
+        div {
+            width: 120px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                height: 47px;
+                width: 48px;
+
+                &.social-fb {
+                    background-image: url("../icons/fb.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    &:hover {
+                        background-image: url("../icons/fb2.png");
+                        // @include borderRadius(50%);
+                        // background-color: $facebook-color;
+                    }
+                }
+
+                &.social-g {
+                    background-image: url("../icons/google.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    &:hover {
+                        background-image: url("../icons/google2.png");
+                        // @include borderRadius(50%);
+                        // background-color: $google-color;
+                    }
+                }
+            }
+        }
+    }
+}
+//*********************************************
+//************ media queries ******************
+//*********************************************
+/*
+@media only screen and (min-width:320px) and (max-width: 850px){
+    .slider{
+        width:100%;
+    }
+}
+*/
+@media only screen and (min-width:320px) and (max-width:350px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin-left: 32px;
+    }
+}
+}
+
+@media only screen and (min-width:351px) and (max-width:400px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin-left: 55px;
+    }
+}
+}
+
+@media only screen and (min-width:401px) and (max-width:450px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin-left: 84px;
+    }
+}
+}
+@media only screen and (min-width:451px) and (max-width:500px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin-left: 102px;
+    }
+}
+}
+@media only screen and (min-width:501px) and (max-width:550px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin-left: 130px;
+    }
+}
+}
+@media only screen and (min-width:551px) and (max-width:600px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin-left: 165px;
+    }
+}
+}
+@media only screen and (min-width:601px) and (max-width:650px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin-left: 6px;
+    }
+}
+}
+@media only screen and (min-width:651px) and (max-width:700px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin: auto 42px;
+    }
+}
+}
+@media only screen and (min-width:701px) and (max-width:800px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin: auto 61px;
+    }
+}
+}
+@media only screen and (min-width:801px) and (max-width:850px) {
+.slider{
+    width:100%;
+    .slider-content{
+        margin: auto 79px;
+    }
+}
+}
+@media only screen and (min-width:851px) and (max-width:900px) {
+.slider{
+    width:96%;
+    .slider-content{
+        // margin: auto 91px;
+    }
+}
+}
+@media only screen and (min-width:901px) and (max-width:1000px) {
+.slider{
+    width:87%;
+
+}
+}
+@media only screen and (min-width:1000px) and (max-width:1100px) {
+.slider{
+    width:80%;
+
+}
+}
+@media only screen and (min-width:1101px) and (max-width:1200px) {
+.slider{
+    width:72%;
+
+}
+}
+@media only screen and (min-width:1201px) and (max-width:1300px) {
+.slider{
+    width:66%;
+
+}
+}
+@media only screen and (min-width:1301px) and (max-width:1400px) {
+.slider{
+    width:90%;
+}
+}
+@media only screen and (min-width:1401px) and (max-width:1600px) {
+.slider{
+    width:83%;
+    .slider-content{
+        margin: auto 80px;
+    }
+}
+}
+@media only screen and (min-width:1601px) and (max-width:1700px) {
+.slider{
+    width:72%;
+}
+}
+@media only screen and (min-width:1701px) and (max-width:1800px) {
+.slider{
+    width:71%;
+}
 }

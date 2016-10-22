@@ -7,9 +7,7 @@
 #about-us {
     width: 100%;
     height: 1030px;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 130px 0;
+    @include mainSectionsStyling;
 }
 
 %border {

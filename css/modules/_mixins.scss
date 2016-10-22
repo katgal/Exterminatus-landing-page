@@ -16,6 +16,16 @@
     -moz-box-shadow: $top $left $blur $color;
     box-shadow: $top $left $blur $color;
 }
+
+//*********************************************
+//************ sections styling ***************
+//*********************************************
+@mixin mainSectionsStyling{
+    text-align: center;
+    box-sizing: border-box;
+    padding: 130px 0 130px 0;
+}
+
 //*********************************************
 //mixin for animated icon (#scroller) in HEADER
 //*********************************************
