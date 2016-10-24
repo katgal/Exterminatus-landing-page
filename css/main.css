@@ -1633,6 +1633,9 @@ nav {
   #about-us .grid-container .row .col-12 {
     width: 100%;
   }
+  #about-us .paragraph-wrapper p {
+    padding-bottom: 95px;
+  }
   #about-us .col-7 #img-devices {
     width: 550px;
     height: 390px;
@@ -1692,6 +1695,9 @@ nav {
   }
   #about-us .grid-container .row .col-12 {
     width: 100%;
+  }
+  #about-us .paragraph-wrapper p {
+    padding-bottom: 90px;
   }
   #about-us .col-7 #img-devices {
     width: 580px;
@@ -1867,98 +1873,67 @@ nav {
   background-image: url("../icons/google2.png");
 }
 
-/*
-@media only screen and (min-width:320px) and (max-width: 850px){
-    .slider{
-        width:100%;
-    }
-}
-*/
-@media only screen and (min-width: 320px) and (max-width: 350px) {
+@media only screen and (min-width: 320px) and (max-width: 850px) {
   .slider {
     width: 100%;
   }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 350px) {
   .slider .slider-content {
     margin-left: 32px;
   }
 }
 
 @media only screen and (min-width: 351px) and (max-width: 400px) {
-  .slider {
-    width: 100%;
-  }
   .slider .slider-content {
     margin-left: 55px;
   }
 }
 
 @media only screen and (min-width: 401px) and (max-width: 450px) {
-  .slider {
-    width: 100%;
-  }
   .slider .slider-content {
     margin-left: 84px;
   }
 }
 
 @media only screen and (min-width: 451px) and (max-width: 500px) {
-  .slider {
-    width: 100%;
-  }
   .slider .slider-content {
     margin-left: 102px;
   }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 550px) {
-  .slider {
-    width: 100%;
-  }
   .slider .slider-content {
     margin-left: 130px;
   }
 }
 
 @media only screen and (min-width: 551px) and (max-width: 600px) {
-  .slider {
-    width: 100%;
-  }
   .slider .slider-content {
     margin-left: 165px;
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 650px) {
-  .slider {
-    width: 100%;
-  }
   .slider .slider-content {
     margin-left: 6px;
   }
 }
 
 @media only screen and (min-width: 651px) and (max-width: 700px) {
-  .slider {
-    width: 100%;
-  }
   .slider .slider-content {
     margin: auto 42px;
   }
 }
 
 @media only screen and (min-width: 701px) and (max-width: 800px) {
-  .slider {
-    width: 100%;
-  }
   .slider .slider-content {
     margin: auto 61px;
   }
 }
 
 @media only screen and (min-width: 801px) and (max-width: 850px) {
-  .slider {
-    width: 100%;
-  }
   .slider .slider-content {
     margin: auto 79px;
   }

@@ -147,7 +147,7 @@ scrollSection2();
 
 //I am aware that this may contain little too much heresy but I wanted to create RWD slider on my own
 //maybe it is not perfect but I will figure it out... someday
-//in responsive view it looks ok, in browser window not so great in some sizes...
+//in responsive view it looks ok, in browser window not so great in some small sizes...(?)
 function heroSlider() {
 
     var prevButton = $(".prev");
@@ -155,115 +155,118 @@ function heroSlider() {
     var sliderContainer = $(".slider-container");
 
     nextButton.on("click", function() {
-
-        //it have to be set on 1800px because when I add other numbers doesn't work as planned
-        if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 350) {
-            sliderContainer.animate({
-                marginLeft: "-=360px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 400) { //-1900
-            sliderContainer.animate({
-                marginLeft: "-=380px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 450) { //-2050
-            sliderContainer.animate({
-                marginLeft: "-=410px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 500) { //-2125
-            sliderContainer.animate({
-                marginLeft: "-=425px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 550) { //-2275
-            sliderContainer.animate({
-                marginLeft: "-=455px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 600) { //-2450
-            sliderContainer.animate({
-                marginLeft: "-=490px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 650) { //-1330
-            sliderContainer.animate({
-                marginLeft: "-=665px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 700) { //-1330
-            sliderContainer.animate({
-                marginLeft: "-=680px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 800) { //-1490
-            sliderContainer.finish().animate({
-                marginLeft: "-=745px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 850) { //-1490
-            sliderContainer.animate({
-                marginLeft: "-=820px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 900) { //-1600
-            sliderContainer.animate({
-                marginLeft: "-=800px"
-            }, 500);
-        } else {
-
-            if (parseInt(sliderContainer.css("marginLeft")) > -1200 && $(window).width() >= 901) { //1200
+        if (!sliderContainer.is(":animated")) {
+            //it have to be set on 1800px because when I add other numbers doesn't work as planned
+            if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 350) {
                 sliderContainer.animate({
-                    marginLeft: "-=400px"
+                    marginLeft: "-=360px"
                 }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 400) { //-1900
+                sliderContainer.animate({
+                    marginLeft: "-=380px"
+                }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 450) { //-2050
+                sliderContainer.animate({
+                    marginLeft: "-=410px"
+                }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 500) { //-2125
+                sliderContainer.animate({
+                    marginLeft: "-=425px"
+                }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 550) { //-2275
+                sliderContainer.animate({
+                    marginLeft: "-=455px"
+                }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1800 && $(window).width() <= 600) { //-2450
+                sliderContainer.animate({
+                    marginLeft: "-=490px"
+                }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 650) { //-1330
+                sliderContainer.animate({
+                    marginLeft: "-=665px"
+                }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 700) { //-1330
+                sliderContainer.animate({
+                    marginLeft: "-=680px"
+                }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 800) { //-1490
+                sliderContainer.animate({
+                    marginLeft: "-=745px"
+                }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 850) { //-1490
+                sliderContainer.animate({
+                    marginLeft: "-=820px"
+                }, 500);
+            } else if (parseInt(sliderContainer.css("marginLeft")) > -1330 && $(window).width() <= 900) { //-1600
+                sliderContainer.animate({
+                    marginLeft: "-=800px"
+                }, 500);
+            } else {
+
+                if (parseInt(sliderContainer.css("marginLeft")) > -1200 && $(window).width() >= 901) { //1200
+                    sliderContainer.animate({
+                        marginLeft: "-=400px"
+                    }, 500);
+                }
             }
         }
     });
     prevButton.on("click", function() {
-
-        if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 350) {
-            sliderContainer.animate({
-                marginLeft: "+=360px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 400) {
-            sliderContainer.animate({
-                marginLeft: "+=380px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 450) {
-            sliderContainer.animate({
-                marginLeft: "+=410px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 500) {
-            sliderContainer.animate({
-                marginLeft: "+=425px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 550) {
-            sliderContainer.animate({
-                marginLeft: "+=455px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 600) {
-            sliderContainer.animate({
-                marginLeft: "+=490px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 650) {
-            sliderContainer.animate({
-                marginLeft: "+=665px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 700) {
-            sliderContainer.animate({
-                marginLeft: "+=680px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 800) {
-            sliderContainer.finish().animate({
-                marginLeft: "+=745px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 850) {
-            sliderContainer.animate({
-                marginLeft: "+=820px"
-            }, 500);
-        } else if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() <= 900) {
-            sliderContainer.animate({
-                marginLeft: "+=800px"
-            }, 500);
-        } else {
-            if (parseInt(sliderContainer.css("marginLeft")) < 0 && $(window).width() >= 901) {
+        if (!sliderContainer.is(":animated") && parseInt(sliderContainer.css("marginLeft")) < 0) {
+            if ($(window).width() <= 350) {
                 sliderContainer.animate({
-                    marginLeft: "+=400px"
-                }, 400);
+                    marginLeft: "+=360px"
+                }, 500);
+            } else if ($(window).width() <= 400) {
+                sliderContainer.animate({
+                    marginLeft: "+=380px"
+                }, 500);
+            } else if ($(window).width() <= 450) {
+                sliderContainer.animate({
+                    marginLeft: "+=410px"
+                }, 500);
+            } else if ($(window).width() <= 500) {
+                sliderContainer.animate({
+                    marginLeft: "+=425px"
+                }, 500);
+            } else if ($(window).width() <= 550) {
+                sliderContainer.animate({
+                    marginLeft: "+=455px"
+                }, 500);
+            } else if ($(window).width() <= 600) {
+                sliderContainer.animate({
+                    marginLeft: "+=490px"
+                }, 500);
+            } else if ($(window).width() <= 650) {
+                sliderContainer.animate({
+                    marginLeft: "+=665px"
+                }, 500);
+            } else if ($(window).width() <= 700) {
+                sliderContainer.animate({
+                    marginLeft: "+=680px"
+                }, 500);
+            } else if ($(window).width() <= 800) {
+                sliderContainer.animate({
+                    marginLeft: "+=745px"
+                }, 500);
+            } else if ($(window).width() <= 850) {
+                sliderContainer.animate({
+                    marginLeft: "+=820px"
+                }, 500);
+            } else if ($(window).width() <= 900) {
+                sliderContainer.animate({
+                    marginLeft: "+=800px"
+                }, 500);
+            } else {
+                if ($(window).width() >= 901) {
+                    sliderContainer.animate({
+                        marginLeft: "+=400px"
+                    }, 400);
+                }
             }
+
+
         }
     });
-
 }
 heroSlider();

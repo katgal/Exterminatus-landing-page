@@ -157,11 +157,16 @@
     }
 }
 
+
 //*************** desktop *********************
 @media only screen and #{$desktop} {
     #about-us {
         @include grid-system(12, 80%, 0);
-
+        .paragraph-wrapper{
+            p{
+                padding-bottom:95px;
+            }
+        }
         .col-7 {
             #img-devices {
                 width: 550px;
@@ -175,7 +180,11 @@
 @media only screen and #{$desktop3} {
     #about-us {
         @include grid-system(12, 70%, 0);
-
+        .paragraph-wrapper{
+            p{
+                padding-bottom:90px;
+            }
+        }
         .col-7 {
             #img-devices {
                 width: 580px;
