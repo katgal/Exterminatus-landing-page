@@ -1,4 +1,4 @@
-/*created by katgal october 2016*/
+/*created by katgal 2016*/
 $(document).ready(function() {
 
 
@@ -57,7 +57,7 @@ $(document).ready(function() {
             var scrollTop = $(document).scrollTop();
 
             if (scrollTop > navMenuTopPosition) {
-                navMenu.addClass("sticky");
+                navMenu.addClass("sticky").css("opacity", "0.9");
             } else {
                 navMenu.removeClass("sticky");
             }
