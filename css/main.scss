@@ -20,13 +20,3 @@
 @import "partials/section4team&skills";
 //section6 services
 @import "partials/section6services";
-
-//transform:scale(0.7);
-//zoom:70%;
-//najlepiej tworzyc strony na srednich rozdzielczosciach bo na hd wszystko tworymy duze
-// i na mniejszych rozdzielczoczosciach viewport sie nie zgadza, no chyba ze
-// robimy wszystko na flexie i vh i vw (co i tak nie do konca moze wyjsc)
-//min-height jest auto - jak pojawia sie nowe elementy to sie powiekszy/najlepiej
-// ustwac inne elementy na % i rwd bedzie latiwejsze
-// wywalic z reseta wszystkie h! bo maja wielkosc czcionki body, ktora nadalam!
-// pamietac o min-height w vh i vw, jesli nie bedze dzialac w media queris i ogolnie przy rwd

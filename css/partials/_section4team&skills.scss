@@ -125,6 +125,61 @@
     }
 }
 //*********************************************
+//************ progress bars ******************
+//*********************************************
+
+.progressbars-container {
+    width: 65%;
+    // border: 3px solid red;
+    // height: 260px;
+    height: auto;
+    margin: 270px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .bar-container {
+        width: 40%;
+        height: auto;
+        margin-bottom: 70px;
+
+        .span-holder {
+            // width: 420p
+            width: 100%;
+            // width:70%;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 1.5rem;
+
+                &.label {
+                    color: $main-color;
+                }
+            }
+        }
+
+        .progress-bar {
+            position: relative;
+            // width: 420px;
+            width: 100%;
+            height: 30px;
+            background-color: $additional-color;
+            box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.5);
+
+            .progress {
+                position: absolute;
+                width: 1%;
+                height: 100%;
+                background-color: $main-color;
+            }
+        }
+    }
+}
+//*********************************************
 //************ media queries ******************
 //*********************************************
 @media only screen and (max-width: 1300px) {
@@ -230,9 +285,9 @@
     .slider {
         width: 96%;
 
-        .slider-content {
+        // .slider-content {
             // margin: auto 91px;
-        }
+        // }
     }
 }
 @media only screen and (min-width:901px) and (max-width:1000px) {
@@ -277,5 +332,55 @@
 @media only screen and (min-width:1701px) and (max-width:1800px) {
     .slider {
         width: 71%;
+    }
+}
+
+//******** skills media queries ***************
+
+@media only screen and (min-width:320px) and (max-width:1493px) {
+    #team {
+        height: auto;
+        .progressbars-container {
+            margin-top: 160px;
+        }
+    }
+}
+//************* smartphones *******************
+@media only screen and #{$smartphones} {
+    .progressbars-container {
+        width: 90%;
+
+        .bar-container {
+            width: 90%;
+        }
+    }
+}
+//********** bigger smartphones ***************
+@media only screen and #{$bigger-smartphones} {
+    .progressbars-container {
+        width: 80%;
+
+        .bar-container {
+            width: 90%;
+        }
+    }
+}
+//*************** tablets ********************
+@media only screen and #{$tablets} {
+    .progressbars-container {
+        width: 90%;
+    }
+}
+//*************** tablets2 ********************
+@media only screen and #{$tablets2} {
+    .progressbars-container {
+        width: 80%;
+    }
+}
+//*************** desktop *********************
+@media only screen and #{$desktop} {
+    .progressbars-container {
+        width: 80%;
+        margin-top: 220px !important;
     }
 }

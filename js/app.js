@@ -32,15 +32,28 @@ $(document).ready(function() {
         var hamburgerMenu = $(".hamburger-menu");
         var list = $(".menu");
         var mainWidth = $(".main-width");
+        // <a> elements for closing menu after clicking
+        var aElements = list.find("a");
 
         hamburgerMenu.on("click", function() {
             list.slideToggle(500, function() {
 
                 $(this).attr('style', "").toggleClass("show");
             });
-            //****adding class height:auto to .main-width for better look of webopage (menu will not override section1)
+            // ****adding class height:auto to .main-width for better look of webopage (menu will not override section1)
             mainWidth.toggleClass("add-auto-height");
         });
+        // close menu after clicking on link / do not affect whole .menu - prevent .menu "flashing" after click
+        if (hamburgerMenu.css("display") == "block") {
+            aElements.on("click", function() {
+                list.slideToggle(500, function() {
+
+                    $(this).attr('style', "").toggleClass("show");
+                });
+
+                mainWidth.toggleClass("add-auto-height");
+            });
+        }
     }
     animatedMenuScroll();
 
@@ -74,6 +87,7 @@ $(document).ready(function() {
 
         var menu = $(".menu");
         var aElements = menu.find("a");
+        var mainWidth = $(".main-width");
 
         aElements.on("click", function() {
 
@@ -147,7 +161,7 @@ scrollSection2();
 
 //I am aware that this may contain little too much heresy but I wanted to create RWD slider on my own
 //maybe it is not perfect but I will figure it out... someday
-//in responsive view it looks ok, in browser window not so great in some small sizes...(?)
+//in responsive view it looks ok, in browser window not so great in some small sizes...(match media/resize?)
 function heroSlider() {
 
     var prevButton = $(".prev");
