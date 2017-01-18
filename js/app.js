@@ -120,7 +120,7 @@ $(document).ready(function() {
             var target = $("#" + divId);
 
             $("html, body").animate({
-                scrollTop: target.offset().top
+                scrollTop: target.offset().top - 145
             }, 2000);
         });
     }
@@ -284,3 +284,42 @@ function heroSlider() {
     });
 }
 heroSlider();
+
+//**********************************************
+//************** progress bars *****************
+//**********************************************
+function progressBars(){
+
+    var firstBar = $(".accuracy");
+    var secondBar = $(".speed");
+    var thirdBar = $(".resilience");
+    var forthBar = $(".fury");
+
+$(window).on("scroll", function(){
+
+var trigger = $(".trigger");
+var triggerTopPosition = trigger.offset().top - 300;
+var scrollTop = $(document).scrollTop();
+
+if (scrollTop > triggerTopPosition) {
+
+    firstBar.animate({
+        "width": "97%"
+    },2500);
+
+    secondBar.animate({
+        "width": "70%"
+    },2500);
+
+    thirdBar.animate({
+        "width": "85%"
+    },2500);
+
+    forthBar.animate({
+        "width": "100%"
+    },2500);
+}
+});
+}
+
+progressBars();
