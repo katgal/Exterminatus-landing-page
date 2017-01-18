@@ -2112,6 +2112,69 @@ nav {
   height: 965px;
   background-color: #a57472;
   opacity: 0.9;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 130px 0 130px 0;
+}
+
+.services {
+  height: 130px;
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services p:first-child {
+  font-size: 5rem;
+  padding-bottom: 10px;
+}
+
+.services p:last-child {
+  font-size: 1.3rem;
+  color: #47170b;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .services {
+    width: 100%;
+  }
+  .services p:first-child {
+    font-size: 2rem;
+  }
+  .services p:last-child {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .services {
+    width: 100%;
+  }
+  .services p:first-child {
+    font-size: 3.3rem;
+  }
+  .services p:last-child {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .services {
+    width: 90%;
+  }
+  .services p:first-child {
+    font-size: 4rem;
+  }
+}
+
+#portfolio {
+  height: 2800px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 130px 0 130px 0;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -96,6 +96,7 @@ $(document).ready(function() {
             var aHref = $(this).attr("href");
             var target = $(aHref);
 
+
             $("html, body").animate({
                 scrollTop: target.offset().top
             }, 2000);
@@ -288,38 +289,80 @@ heroSlider();
 //**********************************************
 //************** progress bars *****************
 //**********************************************
-function progressBars(){
+function progressBars() {
 
     var firstBar = $(".accuracy");
     var secondBar = $(".speed");
     var thirdBar = $(".resilience");
     var forthBar = $(".fury");
 
-$(window).on("scroll", function(){
+    $(window).on("scroll", function() {
 
-var trigger = $(".trigger");
-var triggerTopPosition = trigger.offset().top - 300;
-var scrollTop = $(document).scrollTop();
+        var trigger = $(".trigger");
+        var triggerTopPosition = trigger.offset().top - 300;
+        var scrollTop = $(document).scrollTop();
 
-if (scrollTop > triggerTopPosition) {
+        if (scrollTop > triggerTopPosition) {
 
-    firstBar.animate({
-        "width": "97%"
-    },2500);
+            firstBar.animate({
+                "width": "97%"
+            }, 2500);
 
-    secondBar.animate({
-        "width": "70%"
-    },2500);
+            secondBar.animate({
+                "width": "70%"
+            }, 2500);
 
-    thirdBar.animate({
-        "width": "85%"
-    },2500);
+            thirdBar.animate({
+                "width": "85%"
+            }, 2500);
 
-    forthBar.animate({
-        "width": "100%"
-    },2500);
-}
-});
+            forthBar.animate({
+                "width": "100%"
+            }, 2500);
+        }
+    });
 }
 
 progressBars();
+
+//**********************************************
+//************ services counter ****************
+//**********************************************
+
+function count() {
+
+    $(window).on("scroll", startCounter);
+
+    function startCounter() {
+
+        var scrollTop = $(document).scrollTop();
+        var countOnScroll = $("#services-slider").offset().top - 700;
+        var counter = $(".counter-item").find("p:first-child");
+
+        if (scrollTop >= countOnScroll) {
+
+            $(window).off("scroll", startCounter); //prevents from multiple starts/count on scroll
+
+            counter.each(function() {
+                var $this = $(this);
+                $({
+                    Counter: counter.text()
+                }).animate({
+                    Counter: $this.data().count
+                }, {
+                    duration: 2500,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.ceil(this.Counter));
+                    }
+                });
+            });
+        }
+    }
+}
+count();
+
+
+//zrobić ifa na scroll - jesli scrollTop mniejszy to nie dawaj offfset() - 145
+//naprawic grafike na explorerze
+// buttton watch now zrobic console.log

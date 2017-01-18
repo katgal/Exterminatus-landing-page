@@ -1,6 +1,70 @@
-#services-slider{
-  width:100%;
-  height:965px;
-  background-color: $additional-color;
+#services-slider {
+    width: 100%;
+    height: 965px;
+    background-color: $additional-color;
     opacity: 0.9;
+    @include mainSectionsStyling;
 }
+//rgba
+//165px pading/margin od gry
+
+.services {
+    height: 130px;
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    p:first-child {
+        font-size: 5rem;
+        padding-bottom: 10px;
+    }
+
+    p:last-child {
+        font-size: 1.3rem;
+        color: darken($main-color, 10%);
+    }
+}
+
+//*********************************************
+//************* media queries *****************
+//*********************************************
+
+//**************** counter ********************
+@media only screen and #{$smartphones} {
+    .services {
+        width: 100%;
+
+        p:first-child {
+            font-size: 2rem;
+        }
+
+        p:last-child {
+            font-size: 1rem;
+        }
+    }
+}
+@media only screen and #{$bigger-smartphones} {
+    .services {
+        width: 100%;
+
+        p:first-child {
+            font-size: 3.3rem;
+        }
+
+        p:last-child {
+            font-size: 1.2rem;
+        }
+    }
+}
+@media only screen and #{$tablets} {
+    .services {
+        width: 90%;
+
+        p:first-child {
+            font-size: 4rem;
+        }
+    }
+}
+
+//**************** slider *********************
