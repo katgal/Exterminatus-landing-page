@@ -5,7 +5,7 @@ $(document).ready(function() {
     console.log("Do you hear the voices too?");
     // console.log("Sanity is for the weak!");
     // console.log("I feel Warp is overtakig me... it is a good pain");
-    // console.log("That is the way to hell...");
+
 
     //**********************************************
     //************** icon scroller *****************
@@ -155,6 +155,20 @@ function scrollSection2() {
 }
 
 scrollSection2();
+
+//**********************************************
+//************** button/consol msg *************
+//**********************************************
+
+function msg() {
+
+    var button = $(".msg");
+
+    button.on("click", function() {
+        console.log("That is the way to hell...");
+    });
+}
+msg();
 
 //**********************************************
 //*************** hero slider ******************
@@ -362,7 +376,28 @@ function count() {
 }
 count();
 
+//**********************************************
+//************** motto slider ******************
+//**********************************************
 
-//zrobić ifa na scroll - jesli scrollTop mniejszy to nie dawaj offfset() - 145
-//naprawic grafike na explorerze
-// buttton watch now zrobic console.log
+function mottoSlider() {
+
+    $(".motto-slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnDotsHover: true,
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                dots: false,
+            }
+        }]
+    });
+
+}
+mottoSlider();

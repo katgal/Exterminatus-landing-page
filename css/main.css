@@ -2112,9 +2112,19 @@ nav {
   height: 965px;
   background-color: #a57472;
   opacity: 0.9;
+  position: relative;
   text-align: center;
   box-sizing: border-box;
   padding: 130px 0 130px 0;
+}
+
+#services-slider .white-space {
+  width: 70%;
+  height: 55px;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  background-color: white;
 }
 
 .services {
@@ -2135,7 +2145,75 @@ nav {
   color: #47170b;
 }
 
+.motto-slider {
+  height: 450px;
+  width: 100%;
+  margin-top: 135px;
+}
+
+.motto-slider .motto-content {
+  width: 100%;
+  height: 90%;
+}
+
+.motto-slider .motto-content .photo {
+  width: 170px;
+  height: 170px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #732612;
+  margin: 0 auto 30px;
+}
+
+.motto-slider .motto-content .photo.adepta {
+  background-image: url("../icons/adepta_sororita.png");
+}
+
+.motto-slider .motto-content .photo.ork {
+  background-image: url("../icons/ork.png");
+}
+
+.motto-slider .motto-content .photo.chaos {
+  background-image: url("../icons/chaos.png");
+}
+
+.motto-slider .motto-content .photo.guard {
+  background-image: url("../icons/guard.png");
+}
+
+.motto-slider .motto-content .photo.tyranids {
+  background-image: url("../icons/tyranids.png");
+}
+
+.motto-slider .motto-content .photo.necrons {
+  background-image: url("../icons/necrons.png");
+}
+
+.motto-slider .motto-content p:nth-child(2) {
+  width: 60%;
+  font-size: 2.4rem;
+  line-height: 50px;
+  font-style: italic;
+  color: #1a1a1a;
+  margin: 0 auto;
+}
+
+.motto-slider .motto-content p:nth-child(3) {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-top: 35px;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+  #services-slider {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    height: auto;
+  }
+  #services-slider .white-space {
+    display: none;
+  }
   .services {
     width: 100%;
   }
@@ -2145,9 +2223,27 @@ nav {
   .services p:last-child {
     font-size: 1rem;
   }
+  .motto-slider {
+    margin-top: 40px;
+  }
+  .motto-slider p:nth-child(2) {
+    width: 90% !important;
+    font-size: 1.5rem !important;
+    line-height: 25px !important;
+  }
+  .motto-slider p:nth-child(3) {
+    font-size: 1.5rem !important;
+  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  #services-slider {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  #services-slider .white-space {
+    display: none;
+  }
   .services {
     width: 100%;
   }
@@ -2157,14 +2253,29 @@ nav {
   .services p:last-child {
     font-size: 1.2rem;
   }
+  .motto-slider {
+    margin-top: 90px;
+  }
+  .motto-slider p:nth-child(2) {
+    width: 90% !important;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .white-space {
+    display: none;
+  }
   .services {
     width: 90%;
   }
   .services p:first-child {
     font-size: 4rem;
+  }
+  .motto-slider {
+    margin-top: 100px;
+  }
+  .motto-slider p:nth-child(2) {
+    width: 80% !important;
   }
 }
 
