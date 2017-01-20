@@ -35,23 +35,19 @@ $(document).ready(function() {
         // <a> elements for closing menu after clicking
         var aElements = list.find("a");
 
-        hamburgerMenu.on("click", function() {
-            list.slideToggle(500, function() {
-
-                $(this).attr('style', "").toggleClass("show");
-            });
+        function toggle() {
+            $(this).attr('style', "").toggleClass("show");
             // ****adding class height:auto to .main-width for better look of webopage (menu will not override section1)
             mainWidth.toggleClass("add-auto-height");
+        }
+
+        hamburgerMenu.on("click", function() {
+            list.slideToggle(500, toggle());
         });
         // close menu after clicking on link / do not affect whole .menu - prevent .menu "flashing" after click
         if (hamburgerMenu.css("display") == "block") {
             aElements.on("click", function() {
-                list.slideToggle(500, function() {
-
-                    $(this).attr('style', "").toggleClass("show");
-                });
-
-                mainWidth.toggleClass("add-auto-height");
+                list.slideToggle(500, toggle());
             });
         }
     }
@@ -87,7 +83,6 @@ $(document).ready(function() {
 
         var menu = $(".menu");
         var aElements = menu.find("a");
-        var mainWidth = $(".main-width");
 
         aElements.on("click", function() {
 
@@ -95,11 +90,25 @@ $(document).ready(function() {
 
             var aHref = $(this).attr("href");
             var target = $(aHref);
+            var targetOffset = target.offset().top;
+            var scrollTop = $(document).scrollTop();
 
+            function animate() {
+                $("html, body").animate({
+                    scrollTop: targetOffset
+                }, 2000);
+            }
 
-            $("html, body").animate({
-                scrollTop: target.offset().top
-            }, 2000);
+            if (aHref === "#about-us" && scrollTop < targetOffset) {
+                $("html, body").animate({
+                    scrollTop: targetOffset - 145
+                }, 2000);
+            } else if (aHref === "#about-us" && scrollTop > targetOffset) {
+                animate();
+
+            } else {
+                animate();
+            }
         });
     }
     scrollTo();

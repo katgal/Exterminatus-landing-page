@@ -1723,13 +1723,18 @@ nav {
   box-shadow: inset 0 0 0 1000px rgba(115, 38, 18, 0.3);
   position: relative;
   display: flex;
+  display: -ms-flexbox;
   align-items: center;
+  -ms-flex-align: center;
   justify-content: center;
+  -ms-flex-pack: center;
 }
 
 #parallax1 .sentence-wrapper, #services .sentence-wrapper {
   display: flex;
+  display: -ms-flexbox;
   flex-direction: column;
+  -ms-flex-direction: column;
   text-align: center;
   color: #000;
 }
@@ -1737,6 +1742,8 @@ nav {
 #parallax1 .sentence-wrapper .parallax-icon, #services .sentence-wrapper .parallax-icon {
   margin: 0 auto;
   opacity: 0.5;
+  width: 165px;
+  height: 180px;
 }
 
 #parallax1 .sentence-wrapper .border, #services .sentence-wrapper .border {
@@ -1749,10 +1756,19 @@ nav {
   margin-top: 40px;
 }
 
-@media only screen and (max-device-width: 744px) {
+@media only screen and (max-width: 744px) {
   .border {
     padding: 0;
     line-height: 45px;
+  }
+}
+
+@media all and (max-width: 769px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #parallax1, #services {
+    display: block;
+  }
+  #parallax1 .parallax-icon, #services .parallax-icon {
+    padding-top: 25%;
   }
 }
 
@@ -2122,7 +2138,7 @@ nav {
   width: 70%;
   height: 55px;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 15%;
   background-color: white;
 }
