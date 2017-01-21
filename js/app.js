@@ -1,7 +1,6 @@
 /*created by katgal 2016*/
 $(document).ready(function() {
 
-
     console.log("Do you hear the voices too?");
     // console.log("Sanity is for the weak!");
     // console.log("I feel Warp is overtakig me... it is a good pain");
@@ -28,6 +27,7 @@ $(document).ready(function() {
     //**********************************************
     //****** hamburger menu show-hide animation ****
     //**********************************************
+
     function animatedMenuScroll() {
         var hamburgerMenu = $(".hamburger-menu");
         var list = $(".menu");
@@ -99,14 +99,19 @@ $(document).ready(function() {
                 }, 2000);
             }
 
-            if (aHref === "#about-us" && scrollTop < targetOffset) {
-                $("html, body").animate({
-                    scrollTop: targetOffset - 145
-                }, 2000);
-            } else if (aHref === "#about-us" && scrollTop > targetOffset) {
-                animate();
+            if (scrollTop < targetOffset) {
 
-            } else {
+                var navMenu = $("#scroll-destination");
+                var navMenuHeight = navMenu.height();
+
+                if (!navMenu.hasClass("sticky")) {
+                    $("html, body").animate({
+                        scrollTop: targetOffset - navMenuHeight
+                    }, 2000);
+                } else {
+                    animate();
+                }
+            } else if (scrollTop > targetOffset) {
                 animate();
             }
         });

@@ -3,4 +3,10 @@
   width:100%;
   color:$minor1-color;
   @include mainSectionsStyling;
+  .section-title {
+
+      &::after {
+          left:320px;
+      }
+  }
 }

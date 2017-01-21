@@ -18,9 +18,11 @@ header {
     box-sizing: border-box;
     color: $minor1-color;
     width: 100%;
+    //if you are using horizontal dev tools disable height:100vh and set optimal HD height - height:990px
     height: 100vh;
-    max-height: 1100px;
-    // height:1100px;
+    // max-height: 1100px;
+    //height:990px; optimal height for hd resolution
+    // height:1100px;//original height from template
     background-image: url("../icons/bloodmarine.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -135,6 +137,8 @@ header h3 {
     height: 96px;
     margin: auto 47%;
     img.bounce {
+        position: absolute;
+        bottom: 2%;
         @include bounce(bounce 3s infinite);
 
         &:hover {
