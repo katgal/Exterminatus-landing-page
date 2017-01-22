@@ -84,8 +84,8 @@ $(document).ready(function() {
         var menu = $(".menu");
         var aElements = menu.find("a");
 
-        aElements.on("click", function() {
-
+        aElements.on("click", function(e) {
+            e.preventDefault();//solves problem with flickering (IE and Chrome)
             console.log("Don't think you can order ME around...");
 
             var aHref = $(this).attr("href");
