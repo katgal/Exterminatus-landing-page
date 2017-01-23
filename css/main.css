@@ -214,6 +214,7 @@ header h3 span {
   bottom: 2%;
   -webkit-animation: bounce 3s infinite;
   animation: bounce 3s infinite;
+  -webkit-transform-style: preserve-3d;
 }
 
 @-webkit-keyframes bounce {

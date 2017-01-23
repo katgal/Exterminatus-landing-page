@@ -1,5 +1,4 @@
-@include grid-system(12, 65%, 0);
-// grid have to be in this place, placed somewhere else scss screams that this is a pure heresy!
+@include grid-system(12, 65%, 0); // grid have to be in this place, placed somewhere else scss screams that this is a pure heresy!
 
 //*********************************************
 //**************** header *********************
@@ -9,7 +8,6 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
-
 //*********************************************
 //*************** headings ********************
 //*********************************************
@@ -64,7 +62,6 @@ header h3 {
     // padding: 20px; // had to change bc of 1600x900
     padding: 9px;
 
-
     span {
         font-weight: bold;
     }
@@ -83,15 +80,16 @@ header h3 {
 .headings-wrapper .row:last-child {
     padding-bottom: 100px;
 }
-
 //*********************************************
 //**************** icons **********************
 //*********************************************
+
 // with padding-top in .icons-wrapper looks better on chrome but...
 // in IE and mMzilla looks not right(Scroll icon is half-off the screen)
 // .icons-wrapper{
-    // padding-top: 60px;
+// padding-top: 60px;
 // }
+
 .col-2 {
     width: 175px;
     height: 180px;
@@ -127,7 +125,6 @@ header h3 {
         background-image: url("../icons/background-active-red.png");
     }
 }
-
 //*********************************************
 //************* scroller-icon *****************
 //*********************************************
@@ -136,10 +133,12 @@ header h3 {
     width: 90px;
     height: 96px;
     margin: auto 47%;
+
     img.bounce {
         position: absolute;
         bottom: 2%;
         @include bounce(bounce 3s infinite);
+        -webkit-transform-style: preserve-3d; //solve problem with weird behavior of bouncing icon while scrolling (Firefox)
 
         &:hover {
             cursor: pointer;
@@ -148,7 +147,6 @@ header h3 {
         }
     }
 }
-
 //*********************************************
 //************ media queries ******************
 //*********************************************
@@ -166,10 +164,11 @@ header h3 {
             font-size: 2.3rem;
         }
         //added h3, p font-size
-        h3{
+        h3 {
             font-size: 1.9rem;
         }
-        p{
+
+        p {
             font-size: 1rem !important;
         }
     }
@@ -196,7 +195,7 @@ header h3 {
             //50% 2 columns (33% 3 columns)
             width: 33% !important;
             // height: auto;
-            height:260px;
+            height: 260px;
 
             &.bottom {
                 margin-top: 0 !important;
