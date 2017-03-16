@@ -66,6 +66,15 @@ $(document).ready(function() {
             var scrollTop = $(document).scrollTop();
 
             if (scrollTop > navMenuTopPosition) {
+                // this IE exeption solves problems with z-index
+                //(<nav> while becoming .sticky was hiding behind section1 for a second), I have read IE has problems with z-index
+                //I tried position: relative with parent/child elements solutions (css sheet) but they did not work
+                // so I used this code instead,
+                //it works fine but when <nav> gets .sticky class for the first time code does not work properly...
+                // I see tricky heresy growing here...
+                if(!!navigator.userAgent.match(/Trident\/7\./)){
+                    navMenu.addClass("sticky").css({"opacity": "0.9", "z-index":"1000"});
+                }
                 navMenu.addClass("sticky").css("opacity", "0.9");
             } else {
                 navMenu.removeClass("sticky");
