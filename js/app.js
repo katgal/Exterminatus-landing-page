@@ -432,7 +432,7 @@ $(document).ready(function() {
         var necron = mottoSlider.find(".necrons");
 
         ork.on("mouseenter", function() {
-            console.log("Zog off! ... Stoopid oomies...");
+            console.log("Zog off! ... Stoopid humies...");
         });
 
         chaos.on("mouseenter", function() {

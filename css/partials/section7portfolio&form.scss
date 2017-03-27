@@ -1,12 +1,53 @@
-#portfolio{
-  height:2800px;
-  width:100%;
-  color:$minor1-color;
-  @include mainSectionsStyling;
-  .section-title {
+#portfolio {
+    height: 2800px;
+    width: 100%;
+    color: $minor1-color;
+    @include mainSectionsStyling;
 
-      &::after {
-          left:320px;
-      }
-  }
+    .section-title {
+        &::after {
+            left: 320px;
+        }
+    }
+
+    .button-wrapper {
+        padding-top: 80px;
+        padding-bottom: 70px;
+
+        &__tags {
+            height: 30px;
+            padding: 1px 20px;
+            margin: 0 0.3% 5px 0;
+            @include borderRadius(3px);
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 1px solid $minor2-color;
+            background-color: $minor1-color;
+
+            &:hover {
+                border-color: $main-color;
+                background-color: $main-color;
+                color: $minor1-color;
+            }
+        }
+    }
+}
+//*********************************************
+//************ media queries ******************
+//*********************************************
+
+//******** portfolio span smartphones *********
+@media only screen and (max-width:380px) {
+    .section-title {
+        font-size: 2.5rem;
+
+        &::before {
+            left: 8px;
+            top: 60px;
+        }
+
+        &::after {
+            left: 260px !important;
+        }
+    }
 }

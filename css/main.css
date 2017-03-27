@@ -2311,4 +2311,41 @@ nav {
   left: 320px;
 }
 
+#portfolio .button-wrapper {
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+
+#portfolio .button-wrapper__tags {
+  height: 30px;
+  padding: 1px 20px;
+  margin: 0 0.3% 5px 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#portfolio .button-wrapper__tags:hover {
+  border-color: #732612;
+  background-color: #732612;
+  color: white;
+}
+
+@media only screen and (max-width: 380px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .section-title::before {
+    left: 8px;
+    top: 60px;
+  }
+  .section-title::after {
+    left: 260px !important;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
