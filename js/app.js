@@ -1,4 +1,4 @@
-/*created by katgal 2016*/
+/*created by katgal 2017*/
 $(document).ready(function() {
 
     console.log("Do you hear the voices too?");

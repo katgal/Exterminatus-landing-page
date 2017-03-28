@@ -9,7 +9,9 @@
             left: 320px;
         }
     }
-
+    //*********************************************
+    //**************** buttons ********************
+    //*********************************************
     .button-wrapper {
         padding-top: 80px;
         padding-bottom: 70px;
@@ -33,9 +35,60 @@
     }
 }
 //*********************************************
-//************ media queries ******************
+//**************** gallery ********************
 //*********************************************
 
+.gallery {
+    width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    &__figure {
+        display: inline-block;
+        width: 30%;
+        height: auto;
+        color: $minor2-color;
+        margin: 10px;
+
+        &--image {
+            width: 100%;
+            cursor: pointer;
+            opacity: 0.9;
+            box-shadow: 5px 3px 17px -4px $minor2-color;
+
+            &:hover {
+                opacity: 1;
+                box-shadow: 5px 5px 20px 0 $minor2-color;
+            }
+        }
+
+        &--figcaption {
+            font-size: 1.3rem;
+            padding: 15px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.gallery-button {
+    width: 230px;
+    height: 75px;
+    font-size: 1.4rem;
+    color: $minor1-color;
+    border-color: $main-color;
+    background-color: $main-color;
+    @include borderRadius(5px);
+    margin-top: 30px;
+
+    &:hover {
+        @include boxShadow(0, 1px, 2px, 0, $minor2-color);
+        background: lighten($main-color, 5%);
+        cursor: pointer;
+    }
+}
+//*********************************************
+//************ media queries ******************
+//*********************************************
 //******** portfolio span smartphones *********
 @media only screen and (max-width:380px) {
     .section-title {
@@ -51,3 +104,37 @@
         }
     }
 }
+//****************** gallery ******************
+@media only screen and (min-width:320px)and (max-width:700px) {
+    .gallery {
+        width: 90%;
+
+        &__figure {
+            width: 80%;
+        }
+    }
+}
+@media only screen and (min-width: 701px) and (max-width:1024px) {
+    .gallery {
+        width: 80%;
+
+        &__figure {
+            width: 45%;
+
+            &--figcaption {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+@media only screen and (min-width:1025px) and (max-width:1199px) {
+    .figure__figcaption {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (min-width:1200px) and (max-width:1480px) {
+    .figure__figcaption {
+        font-size: 1rem;
+    }
+}
+//******************** form *******************
