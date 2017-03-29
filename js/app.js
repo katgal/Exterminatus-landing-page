@@ -72,8 +72,11 @@ $(document).ready(function() {
                 // so I used this code instead,
                 //it works fine but when <nav> gets .sticky class for the first time code does not work properly...
                 // I see tricky heresy growing here...
-                if(!!navigator.userAgent.match(/Trident\/7\./)){
-                    navMenu.addClass("sticky").css({"opacity": "0.9", "z-index":"1000"});
+                if (!!navigator.userAgent.match(/Trident\/7\./)) {
+                    navMenu.addClass("sticky").css({
+                        "opacity": "0.9",
+                        "z-index": "1000"
+                    });
                 }
                 navMenu.addClass("sticky").css("opacity", "0.9");
             } else {
@@ -474,6 +477,61 @@ $(document).ready(function() {
         });
     }
     mottoSlider();
+
+    //**********************************************
+    //***************** gallery ********************
+    //**********************************************
+
+    function necron() {
+
+        var gallery = $(".gallery");
+        var lord = gallery.find(".necrons");
+
+        lord.on("mouseenter", function() {
+            console.log("Necron Lord: ... (*sigh*)... ultra boneheads...");
+        });
+    }
+    necron();
+
+    //**************** show image ******************
+    //**********************************************
+    function imageView() {
+
+        var body = $("body");
+        var img = $(".figure__image");
+
+        img.on("click", function() {
+            if ($(window).width() >= 770) {
+                var imgAdress = this.getAttribute("src");
+
+                var newDiv = document.createElement("div");
+                $newDiv = $(newDiv);
+                $newDiv.addClass("fullscreen");
+
+                body.append($newDiv);
+
+                var newImg = document.createElement("img");
+                newImg.setAttribute("src", imgAdress);
+                var $newImg = $(newImg);
+
+                $newDiv.append($newImg);
+
+                var close = document.createElement("button");
+                var $close = $(close);
+                close.innerText = "X";
+                $close.addClass("close");
+
+                $newDiv.append($close);
+
+                $close.on("click", function() {
+                    $newDiv.parent().find($newDiv).remove();
+                });
+            }
+        });
+    }
+    imageView();
+
+    //**************** sort image ******************
 
 
 
