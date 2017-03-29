@@ -494,7 +494,6 @@ $(document).ready(function() {
     necron();
 
     //**************** show image ******************
-    //**********************************************
     function imageView() {
 
         var body = $("body");
@@ -533,6 +532,32 @@ $(document).ready(function() {
 
     //**************** sort image ******************
 
+    function sort() {
+
+        var imgs = $(".gallery__figure");
+        var buttons = $(".button-wrapper__tags");
+
+        buttons.on("click", function() {
+
+            var buttonTag = this.dataset.tag;
+            for (var i = 0; i < imgs.length; i++) {
+
+                var imgTag = imgs[i].dataset.tag;
+                var $img = $(imgs[i]);
+
+                if (imgTag.indexOf(buttonTag) == -1) {
+                    $img.fadeOut(1);
+                } else {
+                    $img.fadeIn(500);
+                }
+            }
+        });
+    }
+    sort();
+
+    //**********************************************
+    //******************* form *********************
+    //**********************************************
 
 
 });

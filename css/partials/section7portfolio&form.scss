@@ -13,7 +13,7 @@
     //**************** buttons ********************
     //*********************************************
     .button-wrapper {
-        padding-top: 80px;
+        padding-top: 50px;
         padding-bottom: 70px;
 
         &__tags {
@@ -170,31 +170,29 @@
         font-size: 1rem;
     }
 }
-
 //************* show image ********************
-@media only screen and (min-width:770px) and (max-width:1024px){
-    .fullscreen{
+@media only screen and (min-width:770px) and (max-width:1024px) {
+    .fullscreen {
         img {
             margin: 170px auto;
             width: 700px;
         }
     }
 }
-@media only screen and (min-width:1025px) and (max-width:1400px){
-    .fullscreen{
+@media only screen and (min-width:1025px) and (max-width:1400px) {
+    .fullscreen {
         img {
             margin: 130px auto;
             width: 800px;
         }
     }
 }
-@media only screen and (min-width:1401px) and (max-width:1680px){
-    .fullscreen{
+@media only screen and (min-width:1401px) and (max-width:1680px) {
+    .fullscreen {
         img {
             margin: 120px auto;
             width: 900px;
         }
     }
 }
-
 //******************** form *******************
