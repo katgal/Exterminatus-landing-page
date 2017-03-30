@@ -196,18 +196,46 @@ $(document).ready(function() {
     hover();
 
     //**********************************************
-    //************** button/consol msg *************
+    //**************** button/video ****************
     //**********************************************
 
-    function msg() {
+    function video() {
 
         var button = $(".msg");
 
         button.on("click", function() {
             console.log("That is the way to hell...");
+            //users of IE are using heretic browser so there is no video for them... there must be some punishement for that
+            if ($(window).width() >= 770 && !navigator.userAgent.match(/Trident\/7\./)) {
+                var body = $("body");
+                var newDiv = document.createElement("div");
+                $newDiv = $(newDiv);
+                $newDiv.addClass("fullscreen");
+                body.append(newDiv);
+
+                var video = document.createElement("video");
+                var source = document.createElement("source");
+
+                $(video).css({"height": "auto"}).attr("controls", "controls").attr("autoplay", "autoplay");
+                $(source).attr("src", "video/The_Exterminatus_of_Typhon_Primaris.mp4").attr("type", "video/mp4");
+
+                video.append(source);
+                $newDiv.append(video);
+
+                var close = document.createElement("button");
+                var $close = $(close);
+                close.innerText = "X";
+                $close.addClass("close");
+
+                $newDiv.append($close);
+
+                $close.on("click", function() {
+                    $newDiv.parent().find($newDiv).remove();
+                });
+            }
         });
     }
-    msg();
+    video();
 
     //**********************************************
     //*************** hero slider ******************
@@ -215,7 +243,8 @@ $(document).ready(function() {
 
     //I am aware that this may contain little too much heresy but I wanted to create RWD slider on my own
     //maybe it is not perfect but I will figure it out... someday
-    //in responsive view it looks ok, in browser window not so great in some small sizes...(match media/resize?)
+    //in responsive view it looks ok, in browser window not so great in some small sizes... (match media/resize?)
+    // if you resize window browser you have to refresh site and code will work as planned
     function heroSlider() {
 
         var prevButton = $(".prev");
@@ -555,9 +584,19 @@ $(document).ready(function() {
     }
     sort();
 
+    function heresy() {
+
+        var galleryButton = $(".gallery-button");
+        galleryButton.on("click", function() {
+            console.log("Access denied");
+        });
+    }
+    heresy();
     //**********************************************
     //******************* form *********************
     //**********************************************
 
 
+    //
+    //
 });
