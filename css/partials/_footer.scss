@@ -1,0 +1,24 @@
+.footer {
+    margin-bottom: 130px;
+
+    &__logo {
+        text-align: center;
+        font-size: 3rem;
+
+        sup {
+            vertical-align: super;
+        }
+    }
+}
+//*********************************************
+//************ media queries ******************
+//*********************************************
+@media only screen and (max-width:400px) {
+    .footer {
+        margin-bottom: 50px;
+
+        &__logo {
+            font-size: 2.4rem;
+        }
+    }
+}
