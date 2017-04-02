@@ -1,3 +1,23 @@
+.about-section button, .gallery-button, .touch-container .form__button {
+  width: 230px;
+  height: 75px;
+  font-size: 1.4rem;
+  color: white;
+  border-color: #732612;
+  background-color: #732612;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.about-section button:hover, .gallery-button:hover, .touch-container .form__button:hover {
+  -webkit-box-shadow: 0 1px 2px black;
+  -moz-box-shadow: 0 1px 2px black;
+  box-shadow: 0 1px 2px black;
+  background: #892d15;
+  cursor: pointer;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -1257,26 +1277,6 @@ nav {
   display: block;
 }
 
-.about-section button {
-  width: 230px;
-  height: 75px;
-  font-size: 1.4rem;
-  color: white;
-  border-color: #732612;
-  background-color: #732612;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.about-section button:hover {
-  -webkit-box-shadow: 0 1px 2px black;
-  -moz-box-shadow: 0 1px 2px black;
-  box-shadow: 0 1px 2px black;
-  background: #892d15;
-  cursor: pointer;
-}
-
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   #about-us {
     height: auto;
@@ -2368,24 +2368,8 @@ nav {
 }
 
 .gallery-button {
-  width: 230px;
-  height: 75px;
-  font-size: 1.4rem;
-  color: white;
-  border-color: #732612;
-  background-color: #732612;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   margin-top: 30px;
-}
-
-.gallery-button:hover {
-  -webkit-box-shadow: 0 1px 2px black;
-  -moz-box-shadow: 0 1px 2px black;
-  box-shadow: 0 1px 2px black;
-  background: #892d15;
-  cursor: pointer;
+  margin-bottom: 170px;
 }
 
 .fullscreen {
@@ -2395,13 +2379,14 @@ nav {
   width: 100%;
   height: 100%;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .fullscreen img {
   display: block;
   margin: 80px auto;
   width: 1024px;
+  box-shadow: 10px 10px 10px black;
 }
 
 .fullscreen video {
@@ -2409,6 +2394,7 @@ nav {
   margin: 80px auto;
   width: 70%;
   object-fit: fill;
+  box-shadow: 10px 10px 10px black;
 }
 
 .fullscreen .close {
@@ -2429,16 +2415,133 @@ nav {
   border-color: #892d15;
 }
 
+.touch-container {
+  width: 65%;
+  height: auto;
+  margin: 210px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.touch-container .form {
+  width: 45%;
+  padding-top: 10px;
+}
+
+.touch-container .form__input {
+  width: 99.5%;
+  height: 70px;
+  font-size: 1.3rem;
+  font-family: inherit;
+  color: #4e4e4e;
+  text-indent: 6%;
+  margin-bottom: 40px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border-color: #b4b4b4;
+}
+
+.touch-container .form__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 280px;
+  font-size: 1.3rem;
+  font-family: inherit;
+  color: #4e4e4e;
+  padding: 3% 6%;
+  margin-bottom: 40px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 2px solid #b4b4b4;
+}
+
+.touch-container .form__button {
+  float: left;
+}
+
+.touch-container .text-block {
+  width: 45%;
+}
+
+.touch-container .text-block__paragraph {
+  color: #676767;
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: left;
+  padding-bottom: 10%;
+}
+
+.touch-container .text-block__paragraph--address, .touch-container .text-block__paragraph--phone {
+  font-size: 1.7rem;
+  color: black;
+  font-weight: bold;
+}
+
+.touch-container .text-block__images {
+  width: 100%;
+  height: auto;
+}
+
+.touch-container .text-block__images--all {
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 6%;
+}
+
+.touch-container .text-block__images--facebook {
+  background: url("../icons/fb-big.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.touch-container .text-block__images--facebook:hover {
+  background: url("../icons/fb-big-s.png");
+  border-radius: 50%;
+  border: 2px solid #2d4485;
+}
+
+.touch-container .text-block__images--twitter {
+  background: url("../icons/twitter-big.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.touch-container .text-block__images--twitter:hover {
+  background: url("../icons/twitter-big-s.png");
+  border-radius: 50%;
+  border: 2px solid #00b6f1;
+}
+
+.touch-container .text-block__images--google {
+  background: url("../icons/google-big.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.touch-container .text-block__images--google:hover {
+  background: url("../icons/google-big-s.png");
+  border-radius: 50%;
+  border: 2px solid #dd5044;
+}
+
 @media only screen and (max-width: 380px) {
-  .section-title {
+  .portfolio-title, .touch-title {
     font-size: 2.5rem;
   }
-  .section-title::before {
+  .portfolio-title::before, .touch-title::before {
     left: 8px;
     top: 60px;
   }
-  .section-title::after {
+  .portfolio-title::after {
     left: 260px !important;
+  }
+  .touch-title::after {
+    left: 248px !important;
   }
 }
 
@@ -2448,6 +2551,22 @@ nav {
   }
   .gallery__figure {
     width: 80%;
+  }
+  .touch-container {
+    display: block;
+    width: 80%;
+    margin: 100px auto;
+  }
+  .touch-container__form {
+    width: 100% !important;
+  }
+  .touch-container__text-block {
+    clear: both;
+    width: 100% !important;
+    padding-top: 40px;
+  }
+  .touch-container__text-block .text-block__images--all {
+    margin-right: 0;
   }
 }
 
@@ -2461,17 +2580,32 @@ nav {
   .gallery__figure--figcaption {
     font-size: 1rem;
   }
+  .touch-container {
+    width: 90%;
+    margin: 100px auto;
+  }
+  .touch-container .text-block__images--all {
+    margin-right: 0;
+  }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1199px) {
   .figure__figcaption {
     font-size: 0.8rem;
   }
+  .touch-container {
+    width: 85%;
+    margin: 100px auto;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1480px) {
   .figure__figcaption {
     font-size: 1rem;
+  }
+  .touch-container {
+    width: 75%;
+    margin: 130px auto;
   }
 }
 
