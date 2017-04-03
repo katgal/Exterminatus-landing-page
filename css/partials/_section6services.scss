@@ -37,12 +37,10 @@
 //**************** slider *********************
 
 .motto-slider {
-    //480
-    //465 for disabled javascript
+
     height: 450px;
     width: 100%;
     margin-top: 135px;
-    // overflow: hidden; //for disabled javascript but dots are also dissapearing
 
     .motto-content {
         width: 100%;
@@ -91,7 +89,6 @@
 
         p:nth-child(3) {
             font-size: 1.7rem;
-            // text-transform: uppercase;
             font-weight: bold;
             margin-top: 35px;
         }

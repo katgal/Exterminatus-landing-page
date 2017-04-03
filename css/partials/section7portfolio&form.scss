@@ -1,10 +1,9 @@
 #portfolio {
     height: auto;
-    // max-height: 2800px;
     width: 100%;
     color: $minor1-color;
     @include mainSectionsStyling;
-    padding: 130px 0 20px 0;
+    padding: 130px 0 20px;
 
     .section-title {
         &::after {
@@ -126,10 +125,16 @@
 }
 //****************** form *********************
 
+%focus{
+    border-color: lighten($main-color, 15%);
+    box-shadow: 0 0 8px rgba($additional-color, 0.6);
+    outline: 0 none;
+}
+
 .touch-container {
     width: 65%;
     height: auto;
-    margin: 210px auto;
+    margin: 210px auto 90px;
     display: flex;
     justify-content: space-between;
 
@@ -147,12 +152,10 @@
             margin-bottom: 40px;
             @include borderRadius(3px);
             border-color: lighten($additional2-color, 30%);
-            //   &:focus{
-            //   border-color: $main-color;
-            // border-color: rgba($main-color, 0.8);
-            // box-shadow: 0 1px 1px rgba($additional-color, 0.075) inset, 0 0 8px rgba($additional-color, 0.6);
-            // outline: 0 none;
-            //   }
+
+            &:focus {
+                @extend %focus;
+            }
         }
 
         &__textarea {
@@ -166,9 +169,9 @@
             margin-bottom: 40px;
             @include borderRadius(3px);
             border: 2px solid lighten($additional2-color, 30%);
-            // &:placeholder-shown {
-            // color: darken($additional2-color, 10%);
-            // }
+            &:focus {
+                @extend %focus;
+            }
         }
 
         &__button {
@@ -191,6 +194,10 @@
             line-height: 2rem;
             text-align: left;
             padding-bottom: 10%;
+
+            &--description {
+                text-align: justify;
+            }
 
             &--address,
             &--phone {

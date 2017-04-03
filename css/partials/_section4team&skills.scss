@@ -43,14 +43,12 @@
 .slider {
     width: 65%;
     overflow: hidden;
-    // border: 2px solid red;
     margin: 0 auto;
 }
 
 .slider-container {
     box-sizing: border-box;
     height: 560px;
-    // width: 1000px;
     width: 2400px;
     margin: 90px auto;
     padding: 45px 10px;
@@ -58,7 +56,6 @@
     flex-direction: row;
 
     .slider-content {
-        // height:550px;
         height: 90%;
         width: 250px;
         margin: auto 75px;
@@ -70,7 +67,6 @@
             height: 250px;
             width: 250px;
             margin-bottom: 20px;
-            // background-color: red;
             @include borderRadius(50%);
             box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.5);
 
@@ -130,8 +126,6 @@
 
 .progressbars-container {
     width: 65%;
-    // border: 3px solid red;
-    // height: 260px;
     height: auto;
     margin: 270px auto 0;
     display: flex;
@@ -144,9 +138,7 @@
         margin-bottom: 70px;
 
         .span-holder {
-            // width: 420p
             width: 100%;
-            // width:70%;
             padding: 20px 0;
             display: flex;
             justify-content: space-between;
@@ -203,7 +195,6 @@
 }
 @media only screen and (min-width:320px) and (max-width:350px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin-left: 32px;
         }
@@ -211,7 +202,6 @@
 }
 @media only screen and (min-width:351px) and (max-width:400px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin-left: 55px;
         }
@@ -219,7 +209,6 @@
 }
 @media only screen and (min-width:401px) and (max-width:450px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin-left: 84px;
         }
@@ -227,7 +216,6 @@
 }
 @media only screen and (min-width:451px) and (max-width:500px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin-left: 102px;
         }
@@ -235,7 +223,6 @@
 }
 @media only screen and (min-width:501px) and (max-width:550px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin-left: 130px;
         }
@@ -243,7 +230,6 @@
 }
 @media only screen and (min-width:551px) and (max-width:600px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin-left: 165px;
         }
@@ -251,7 +237,6 @@
 }
 @media only screen and (min-width:601px) and (max-width:650px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin-left: 6px;
         }
@@ -259,7 +244,6 @@
 }
 @media only screen and (min-width:651px) and (max-width:700px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin: auto 42px;
         }
@@ -267,7 +251,6 @@
 }
 @media only screen and (min-width:701px) and (max-width:800px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin: auto 61px;
         }
@@ -275,7 +258,6 @@
 }
 @media only screen and (min-width:801px) and (max-width:850px) {
     .slider {
-        // width:100%;
         .slider-content {
             margin: auto 79px;
         }
@@ -284,10 +266,6 @@
 @media only screen and (min-width:851px) and (max-width:900px) {
     .slider {
         width: 96%;
-
-        // .slider-content {
-            // margin: auto 91px;
-        // }
     }
 }
 @media only screen and (min-width:901px) and (max-width:1000px) {
