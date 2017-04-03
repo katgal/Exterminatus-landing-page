@@ -2183,6 +2183,7 @@ nav {
   border-radius: 50%;
   background-color: #732612;
   margin: 0 auto 30px;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
 .motto-slider .motto-content .photo.adepta {
@@ -2433,6 +2434,7 @@ nav {
 .touch-container .form {
   width: 45%;
   padding-top: 10px;
+  position: relative;
 }
 
 .touch-container .form__input {
@@ -2447,6 +2449,26 @@ nav {
   -moz-border-radius: 3px;
   border-radius: 3px;
   border-color: #b4b4b4;
+}
+
+.touch-container .form__input--error {
+  position: absolute;
+  color: #892d15;
+  font-size: 1rem;
+  text-align: left;
+  z-index: 10;
+}
+
+.touch-container .form .errorName {
+  top: 15%;
+}
+
+.touch-container .form .errorEmail {
+  top: 33%;
+}
+
+.touch-container .form .errorMsg {
+  top: 82%;
 }
 
 .touch-container .form__textarea {
@@ -2570,6 +2592,12 @@ nav {
   }
   .touch-container__form {
     width: 100% !important;
+  }
+  .touch-container__form .errorEmail {
+    top: 36% !important;
+  }
+  .touch-container__form .errorMsg {
+    top: 93% !important;
   }
   .touch-container__text-block {
     clear: both;

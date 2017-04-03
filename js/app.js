@@ -2,9 +2,6 @@
 $(document).ready(function() {
 
     console.log("Do you hear the voices too?");
-    // console.log("Sanity is for the weak!");
-    // console.log("I feel Warp is overtakig me... it is a good pain");
-
 
     //**********************************************
     //************** icon scroller *****************
@@ -584,19 +581,59 @@ $(document).ready(function() {
     }
     sort();
 
-    function heresy() {
+    function buttonAccess() {
 
         var galleryButton = $(".gallery-button");
         galleryButton.on("click", function() {
             console.log("Access denied");
         });
     }
-    heresy();
+    buttonAccess();
     //**********************************************
     //******************* form *********************
     //**********************************************
 
+    function formVerification() {
 
-    //
-    //
+        var form = $(".form");
+        var name = $(".form__input--name");
+        var email = $(".form__input--email");
+        var msg = $(".form__textarea");
+        var errorName = $(".errorName");
+        var errorEmail = $(".errorEmail");
+        var errorMsg = $(".errorMsg");
+
+        form.on("submit", function(event) {
+
+            var nameValue = name.val();
+            var emailValue = email.val();
+            var msgValue = msg.val();
+            var validEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(emailValue);
+
+            errorName.text("");
+            errorEmail.text("");
+            errorMsg.text("");
+
+            if (nameValue.length < 4) {
+                errorName.text("*Your name must be longer than 5 signs!");
+                event.preventDefault();
+                return;
+            }
+
+            if (!validEmail) {
+                errorEmail.text("*Your email address is invalid! Try again!");
+                event.preventDefault();
+                return;
+            }
+
+            if (msgValue.length <= 10) {
+                errorMsg.text("*Your message must be longer than 10 signs!");
+                event.preventDefault();
+                return;
+            }
+
+        });
+    }
+    formVerification();
+
 });

@@ -1,4 +1,5 @@
-@include grid-system(12, 65%, 0); // grid have to be in this place, placed somewhere else scss screams that this is a pure heresy!
+@include grid-system(12, 65%, 0);
+// grid have to be in this place, placed somewhere else scss screams that this is a pure heresy!
 
 //*********************************************
 //**************** header *********************
@@ -44,7 +45,6 @@ header {
 }
 
 header h1 {
-    // font-size: 4rem;
     font-size: 4.4rem;
     text-transform: uppercase;
     font-weight: 900;
@@ -56,10 +56,8 @@ header h1 {
 }
 
 header h3 {
-    // font-size: 2rem;
     font-size: 2.5rem;
     font-weight: 400;
-    // padding: 20px; // had to change bc of 1600x900
     padding: 9px;
 
     span {
@@ -73,7 +71,7 @@ header h3 {
     line-height: 1.3rem;
     padding: 0 20px;
     @extend %center;
-    /// added font-size
+    //added font-siz
     font-size: 1.1rem;
 }
 
@@ -108,7 +106,7 @@ header h3 {
     background-position: center;
     background-repeat: no-repeat;
     padding: 40px;
-    //margin solve problem with icons centering
+    //margin solves problem with icons centering
     margin: 0 auto;
 
     .inner-icon {
@@ -151,7 +149,7 @@ header h3 {
 //************ media queries ******************
 //*********************************************
 
-// I am aware that using !important is not the best way write code but...in this case is rather difficult to do so...
+// I am aware that using !important is not the best way to write code but... in this case is rather difficult to do so...
 //I will try to figure it out how to erase this heresy from my code
 
 //************* smartphones *******************
@@ -160,7 +158,6 @@ header h3 {
         @include mediaSmartphones;
 
         h1 {
-            // font-size: 2rem;
             font-size: 2.3rem;
         }
         //added h3, p font-size
@@ -179,7 +176,6 @@ header h3 {
         @include mediaSmartphones;
 
         h1 {
-            // font-size: 2.5rem;
             font-size: 3.5rem;
         }
     }
@@ -194,7 +190,6 @@ header h3 {
             // change from vw
             //50% 2 columns (33% 3 columns)
             width: 33% !important;
-            // height: auto;
             height: 260px;
 
             &.bottom {

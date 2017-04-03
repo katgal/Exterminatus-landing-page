@@ -125,7 +125,7 @@
 }
 //****************** form *********************
 
-%focus{
+%focus {
     border-color: lighten($main-color, 15%);
     box-shadow: 0 0 8px rgba($additional-color, 0.6);
     outline: 0 none;
@@ -141,6 +141,7 @@
     .form {
         width: 45%;
         padding-top: 10px;
+        position: relative;
 
         &__input {
             width: 99.5%;
@@ -156,6 +157,26 @@
             &:focus {
                 @extend %focus;
             }
+
+            &--error {
+                position: absolute;
+                color: lighten($main-color, 5%);
+                font-size: 1rem;
+                text-align: left;
+                z-index: 10;
+            }
+        }
+
+        .errorName {
+            top: 15%;
+        }
+
+        .errorEmail {
+            top: 33%;
+        }
+
+        .errorMsg {
+            top: 82%;
         }
 
         &__textarea {
@@ -169,6 +190,7 @@
             margin-bottom: 40px;
             @include borderRadius(3px);
             border: 2px solid lighten($additional2-color, 30%);
+
             &:focus {
                 @extend %focus;
             }
@@ -313,6 +335,14 @@
 
         &__form {
             width: 100% !important;
+
+            .errorEmail {
+                top: 36%!important;
+            }
+
+            .errorMsg {
+                top: 93%!important;
+            }
         }
 
         &__text-block {
