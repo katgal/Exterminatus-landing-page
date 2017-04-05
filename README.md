@@ -14,7 +14,7 @@ Website is also fully responsive.
 
 Here is live version of [Exterminatus](https://katgal.github.io/Exterminatus-landing-page/).
 
-*Please note: If you are using horizontal DevTools plaese read annotation in header.
+*__Please note: If you are using horizontal DevTools please read annotation in header.__
 
 **"Exterminatus" was created in free-heresy-mode, but as we know *There is no such thing as innocence, only degrees of guilt...*
 
