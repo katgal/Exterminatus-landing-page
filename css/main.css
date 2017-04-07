@@ -2382,21 +2382,27 @@ nav {
   height: 100%;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
 }
 
 .fullscreen img {
   display: block;
-  margin: 80px auto;
   width: 1024px;
   box-shadow: 10px 10px 10px black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .fullscreen video {
   display: block;
-  margin: 80px auto;
   width: 70%;
   object-fit: fill;
   box-shadow: 10px 10px 10px black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .fullscreen .close {
@@ -2650,33 +2656,27 @@ nav {
 
 @media only screen and (min-width: 770px) and (max-width: 1024px) {
   .fullscreen video {
-    margin: 250px auto;
     width: 80%;
   }
   .fullscreen img {
-    margin: 170px auto;
     width: 700px;
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1400px) {
   .fullscreen video {
-    margin: 180px auto;
     width: 80%;
   }
   .fullscreen img {
-    margin: 130px auto;
     width: 800px;
   }
 }
 
 @media only screen and (min-width: 1401px) and (max-width: 1680px) {
   .fullscreen video {
-    margin: 150px auto;
     width: 80%;
   }
   .fullscreen img {
-    margin: 120px auto;
     width: 900px;
   }
 }
