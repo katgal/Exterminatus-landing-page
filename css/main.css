@@ -127,7 +127,7 @@ table {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -629,13 +629,15 @@ nav {
   justify-content: space-between;
 }
 
-.nav-name, .logo {
+.logo,
+.nav-name {
   font-size: 2rem;
   font-weight: 700;
   color: #676767;
 }
 
-.nav-name span, .logo span {
+.logo span,
+.nav-name span {
   color: #732612;
 }
 
@@ -702,12 +704,18 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
+  .sticky {
+    height: 67px;
+  }
+  .sticky .main-width {
+    height: 67px;
+  }
   nav {
     height: auto;
   }
   nav .main-width {
     width: 100%;
-    height: 145px;
+    height: 110px;
     display: block;
   }
   nav .nav-name {
@@ -717,6 +725,10 @@ nav {
   nav .hamburger-menu {
     display: block;
     padding-top: 29px;
+  }
+  nav .hamburger-menu div {
+    width: 60px;
+    height: 15px;
   }
   nav .menu {
     clear: both;
@@ -752,15 +764,18 @@ nav {
     padding: 30px;
     text-align: center;
   }
-  .main-width .menu {
-    display: flex;
-    justify-content: space-around;
-  }
 }
 
 @media only screen and (min-width: 1201px) and (max-width: 1493px) {
   .main-width {
     width: 90vw;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .menu {
+    display: flex !important;
+    justify-content: space-around;
   }
 }
 

@@ -13,7 +13,8 @@ nav {
     justify-content: space-between;
 }
 
-.nav-name, .logo {
+.logo,
+.nav-name {
     font-size: 2rem;
     font-weight: 700;
     color: $additional2-color;
@@ -22,7 +23,6 @@ nav {
         color: $main-color;
     }
 }
-
 //*********************************************
 //************ hamburger icon *****************
 //*********************************************
@@ -47,7 +47,6 @@ nav {
     border-radius: 5px;
     margin: 3px 0;
 }
-
 //*********************************************
 //******** vanilla menu/horizontal ************
 //*********************************************
@@ -65,13 +64,13 @@ nav {
             font-size: 1.2rem;
             font-weight: bold;
             text-transform: uppercase;
+
             &:hover {
                 color: $main-color;
             }
         }
     }
 }
-
 //********* sticky class for menu *************
 
 .sticky {
@@ -95,19 +94,25 @@ nav {
         }
     }
 }
-
 //*********************************************
 //*****************media querries**************
 //*********************************************
-
 //**** smartphones and biggersmartphones******
 @media only screen and (max-width: 768px) {
+    .sticky {
+        height: 67px;
+
+        .main-width {
+            height: 67px;
+        }
+    }
+
     nav {
         height: auto;
 
         .main-width {
             width: 100%;
-            height: 145px;
+            height: 110px;
             display: block;
         }
 
@@ -119,12 +124,15 @@ nav {
         .hamburger-menu {
             display: block;
             padding-top: 29px;
-        }
 
+            div {
+                width: 60px;
+                height: 15px;
+            }
+        }
         //*********************************************
         //*********** hamburger menu/vertical *********
         //*********************************************
-
         .menu {
             clear: both;
             display: none;
@@ -149,21 +157,17 @@ nav {
         .add-auto-height {
             height: auto;
         }
-
         //*********************************************
         //*********** class for menu animation ********
         //*********************************************
-
         .show {
             display: block;
         }
     }
 }
-
 //*********************************************
 //*********** tablets/smaller desktops ********
 //*********************************************
-
 @media only screen and (min-width : 769px) and (max-width : 1200px) {
     .main-width {
         width: 100vw;
@@ -173,20 +177,21 @@ nav {
             padding: 30px;
             text-align: center;
         }
-
-        .menu {
-            display: flex;
-            justify-content: space-around;
-        }
     }
 }
-
 //*********************************************
 //**************** small desktops *************
 //*********************************************
-
 @media only screen and #{$desktop} {
     .main-width {
         width: 90vw;
+    }
+}
+//fix problem with display:none (after clicking on hamburger menu higher resolution didnt show .menu content)
+// on screen rezize
+@media only screen and (min-width:769px) {
+    .menu {
+        display: flex !important;
+        justify-content: space-around;
     }
 }

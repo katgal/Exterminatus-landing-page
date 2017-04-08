@@ -49,6 +49,7 @@ $(document).ready(function() {
         }
     }
     animatedMenuScroll();
+    // window.addEventListener("resize", animatedMenuScroll());
 
     //**********************************************
     //************** sticky menu *******************
