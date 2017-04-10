@@ -26,11 +26,13 @@ $(document).ready(function() {
     //**********************************************
 
     function animatedMenuScroll() {
+
         var hamburgerMenu = $(".hamburger-menu");
         var list = $(".menu");
         var mainWidth = $(".main-width");
         // <a> elements for closing menu after clicking
         var aElements = list.find("a");
+
 
         function toggle() {
             $(this).attr('style', "").toggleClass("show");
@@ -41,15 +43,15 @@ $(document).ready(function() {
         hamburgerMenu.on("click", function() {
             list.slideToggle(500, toggle());
         });
-        // close menu after clicking on link / do not affect whole .menu - prevent .menu "flashing" after click
+
+        // close menu after clicking on link / work after site refreshing
         if (hamburgerMenu.css("display") == "block") {
-            aElements.on("click", function() {
+            aElements.on("click", function(e) {
                 list.slideToggle(500, toggle());
             });
         }
     }
     animatedMenuScroll();
-    // window.addEventListener("resize", animatedMenuScroll());
 
     //**********************************************
     //************** sticky menu *******************

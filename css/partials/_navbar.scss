@@ -117,7 +117,7 @@ nav {
         }
 
         .nav-name {
-            padding-top: 53px;
+            padding-top: 38px;
             float: left;
         }
 
@@ -170,13 +170,17 @@ nav {
 //*********************************************
 @media only screen and (min-width : 769px) and (max-width : 1200px) {
     .main-width {
-        width: 100vw;
+        width: 98vw;
         display: block;
 
         .nav-name {
             padding: 30px;
             text-align: center;
         }
+        // .menu{
+            // display: flex;
+            // justify-content: space-around;
+        // }
     }
 }
 //*********************************************

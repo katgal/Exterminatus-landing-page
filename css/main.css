@@ -719,7 +719,7 @@ nav {
     display: block;
   }
   nav .nav-name {
-    padding-top: 53px;
+    padding-top: 38px;
     float: left;
   }
   nav .hamburger-menu {
@@ -757,7 +757,7 @@ nav {
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .main-width {
-    width: 100vw;
+    width: 98vw;
     display: block;
   }
   .main-width .nav-name {
